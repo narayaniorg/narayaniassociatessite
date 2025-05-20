@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Narayani Associates</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent" id="navbar">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="img/whitebg.png" alt="Narayani Associates" class="h-12">
+                <div class="flex flex-col">
+                    <span class="text-2xl font-bold text-white">NARAYANI</span>
+                    <span class="text-primary text-xl">ASSOCIATES</span>
+                </div>
+            </a>
+            <div class="hidden md:flex space-x-4">
+                <a href="about.html" class="nav-link">About</a>
+                <a href="practices.html" class="nav-link">Practice Areas</a>
+                <a href="team.html" class="nav-link">Our Team</a>
+                <a href="testimonials.html" class="nav-link text-primary">Testimonials</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+     <!-- Mobile Menu -->
+     <div class="mobile-menu" id="mobile-menu">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex justify-end mb-8">
+                <button id="close-menu" class="text-white focus:outline-none">
+                    <i class="fas fa-times text-3xl"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-6 items-center text-xl">
+                <a href="about.html" class="nav-link mobile-link">About</a>
+                <a href="practices.html" class="nav-link mobile-link">Practice Areas</a>
+                <a href="team.html" class="nav-link mobile-link">Our Team</a>
+                <a href="testimonials.html" class="nav-link mobile-link">Testimonials</a>
+                <a href="contact.html" class="nav-link mobile-link">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header d-flex align-items-center position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        Client <span class="text-primary">Testimonials</span>
+                    </h1>
+                    <p class="lead text-gray-300">Hear what our clients have to say about their experience with Narayani Associates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Testimonials -->
+    <section class="py-5 py-lg-20 bg-black">
+        <div class="container">
+            <div class="text-center max-w-3xl mx-auto mb-5 mb-lg-16" data-aos="fade-up">
+                <h2 class="text-primary h3 mb-4 playfair">Featured Stories</h2>
+                <h3 class="display-5 fw-bold mb-4">Success Stories</h3>
+                <p class="lead text-gray-300">Real experiences from our clients across different practice areas</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Featured Testimonial 1 -->
+                <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card p-4 p-lg-5 rounded-3 bg-gray-900 h-100">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="./img/rupeshpp.jpg" alt="Rajiv Sharma" class="rounded-circle me-4" width="80" height="80">
+                            <div>
+                                <h4 class="h4 fw-bold mb-1">Rajiv Sharma</h4>
+                                <p class="text-primary mb-0">CEO, Sharma Enterprises</p>
+                            </div>
+                        </div>
+                        <div class="text-primary mb-4"><i class="fas fa-quote-left fa-2x"></i></div>
+                        <p class="text-gray-300 mb-4">Narayani Associates handled our corporate restructuring with exceptional attention to detail. Their advice was always practical and focused on our business needs rather than just legal theory. The team's expertise in corporate law helped us navigate complex regulatory requirements while maintaining our business objectives.</p>
+                        <div class="d-flex align-items-center">
+                            <div class="me-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <span class="text-gray-400">Corporate Law</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Testimonial 2 -->
+                <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card p-4 p-lg-5 rounded-3 bg-gray-900 h-100">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="./img/rupeshpp.jpg" alt="Priya Patel" class="rounded-circle me-4" width="80" height="80">
+                            <div>
+                                <h4 class="h4 fw-bold mb-1">Priya Patel</h4>
+                                <p class="text-primary mb-0">Property Developer</p>
+                            </div>
+                        </div>
+                        <div class="text-primary mb-4"><i class="fas fa-quote-left fa-2x"></i></div>
+                        <p class="text-gray-300 mb-4">During our property dispute case, the team at Narayani Associates displayed remarkable dedication and legal acumen. They simplified complex legal concepts and kept us informed at every stage. Their strategic approach and attention to detail resulted in a favorable outcome for our case.</p>
+                        <div class="d-flex align-items-center">
+                            <div class="me-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <span class="text-gray-400">Real Estate Law</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Testimonials -->
+    <section class="py-5 py-lg-20 bg-gray-900">
+        <div class="container">
+            <div class="text-center max-w-3xl mx-auto mb-5 mb-lg-16" data-aos="fade-up">
+                <h2 class="text-primary h3 mb-4 playfair">Client Experiences</h2>
+                <h3 class="display-5 fw-bold mb-4">What Our Clients Say</h3>
+                <p class="lead text-gray-300">We take pride in the relationships we build with our clients. Here's what some of them have to say about working with us.</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Testimonial 1 -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card p-4 p-lg-5 rounded-3 bg-black h-100">
+                        <div class="text-primary mb-4"><i class="fas fa-quote-left fa-2x"></i></div>
+                        <p class="text-gray-300 mb-4">The team's expertise in corporate law has been invaluable to our startup. They've helped us navigate complex legal challenges while keeping our business goals in focus.</p>
+                        <div class="d-flex align-items-center">
+                            <div class="me-3">
+                                <img src="./img/rupeshpp.jpg" alt="Amit Kumar" class="rounded-circle" width="60" height="60">
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Amit Kumar</h5>
+                                <p class="text-gray-500 mb-0">Founder, TechStart India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card p-4 p-lg-5 rounded-3 bg-black h-100">
+                        <div class="text-primary mb-4"><i class="fas fa-quote-left fa-2x"></i></div>
+                        <p class="text-gray-300 mb-4">Their family law team provided exceptional support during a difficult time. They were compassionate, professional, and always available when needed.</p>
+                        <div class="d-flex align-items-center">
+                            <div class="me-3">
+                                <img src="./img/rupeshpp.jpg" alt="Sneha Gupta" class="rounded-circle" width="60" height="60">
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Sneha Gupta</h5>
+                                <p class="text-gray-500 mb-0">Individual Client</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card p-4 p-lg-5 rounded-3 bg-black h-100">
+                        <div class="text-primary mb-4"><i class="fas fa-quote-left fa-2x"></i></div>
+                        <p class="text-gray-300 mb-4">The intellectual property team helped us protect our innovations effectively. Their strategic approach and attention to detail were impressive.</p>
+                        <div class="d-flex align-items-center">
+                            <div class="me-3">
+                                <img src="./img/rupeshpp.jpg" alt="Vikram Singh" class="rounded-circle" width="60" height="60">
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Vikram Singh</h5>
+                                <p class="text-gray-500 mb-0">CTO, InnovateTech</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Testimonials -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="testimonial-card p-4 p-lg-5 rounded-3 bg-black h-100">
+                        <div class="text-primary mb-4"><i class="fas fa-quote-left fa-2x"></i></div>
+                        <p class="text-gray-300 mb-4">Their banking and finance team provided excellent guidance on our loan restructuring. They made complex financial regulations easy to understand.</p>
+                        <div class="d-flex align-items-center">
+                            <div class="me-3">
+                                <img src="./img/rupeshpp.jpg" alt="Rahul Mehta" class="rounded-circle" width="60" height="60">
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Rahul Mehta</h5>
+                                <p class="text-gray-500 mb-0">Finance Director, Growth Corp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More testimonials can be added here -->
+            </div>
+        </div>
+    </section>
+
+ 
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="img/whitebg.png" alt="Narayani Associates" class="h-12 mb-4">
+                    <p class="text-gray-400 mb-4">Delivering excellence in legal services with integrity and dedication since 1998.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="practices.html" class="footer-link">Practice Areas</a></li>
+                        <li><a href="team.html" class="footer-link">Our Team</a></li>
+                        <li><a href="testimonials.html" class="footer-link">Testimonials</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Practice Areas</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link">Litigation & Dispute Resolution</a></li>
+                        <li><a href="#" class="footer-link">Corporate & Commercial Laws</a></li>
+                        <li><a href="#" class="footer-link">Real Estate & Property Laws</a></li>
+                        <li><a href="#" class="footer-link">Succession Planning</a></li>
+                        <li><a href="#" class="footer-link">Family Laws</a></li>
+                        <li><a href="#" class="footer-link">Banking & Finance</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for legal updates and insights.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-primary text-white flex-grow">
+                        <button type="submit" class="bg-primary px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition-all">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Narayani Associates. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Navbar Background Change on Scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.remove('bg-black');
+                navbar.classList.add('bg-transparent');
+            }
+        });
+    </script>
+</body>
+</html> 

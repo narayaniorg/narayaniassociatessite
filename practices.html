@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Areas | Narayani Associates</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        .practice-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border: 2px solid #FF6F0D;
+            border-radius: 25px;
+            color: #FF6F0D;
+            background: transparent;
+            transition: all 0.3s ease;
+            cursor: none !important;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: #FF6F0D;
+            color: white;
+        }
+
+        .practice-card {
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 111, 13, 0.1);
+        }
+
+        .practice-card:hover {
+            transform: translateY(-5px);
+            border-color: #FF6F0D;
+            box-shadow: 0 10px 20px rgba(255, 111, 13, 0.1);
+        }
+
+        .practice-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 111, 13, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .practice-icon i {
+            font-size: 1.5rem;
+            color: #FF6F0D;
+        }
+
+        .practice-category {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.25rem 1rem;
+            background: rgba(255, 111, 13, 0.1);
+            border-radius: 15px;
+            font-size: 0.875rem;
+            color: #FF6F0D;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent" id="navbar">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="img/whitebg.png" alt="Narayani Associates Logo" class="h-12">
+                <div class="flex flex-col">
+                    <span class="text-2xl font-bold text-white">NARAYANI</span>
+                    <span class="text-primary text-xl">ASSOCIATES</span>
+                </div>
+            </a>
+            <div class="hidden md:flex space-x-4">
+                <a href="about.html" class="nav-link">About</a>
+                <a href="practices.html" class="nav-link text-primary">Practice Areas</a>
+                <a href="team.html" class="nav-link">Our Team</a>
+                <a href="testimonials.html" class="nav-link">Testimonials</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex justify-end mb-8">
+                <button id="close-menu" class="text-white focus:outline-none">
+                    <i class="fas fa-times text-3xl"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-6 items-center text-xl">
+                <a href="about.html" class="nav-link mobile-link">About</a>
+                <a href="practices.html" class="nav-link mobile-link">Practice Areas</a>
+                <a href="team.html" class="nav-link mobile-link">Our Team</a>
+                <a href="testimonials.html" class="nav-link mobile-link">Testimonials</a>
+                <a href="contact.html" class="nav-link mobile-link">Contact</a>
+            </div>
+        </div>
+    </div>
+
+
+ <!-- Page Header -->
+ <header class="page-header flex items-center">
+    <div class="col-12 text-center" data-aos="fade-up">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            Our <span class="text-primary">Practice Areas</span>
+        </h1>
+
+        <p class="lead text-gray-300">
+            Comprehensive legal solutions across diverse practice areas
+        </p>
+    </div>
+</header>
+
+    <!-- Practice Areas Section -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <!-- Filter Buttons -->
+            <div class="practice-filter">
+                <button class="filter-btn active" data-filter="all">All Practices</button>
+                <button class="filter-btn" data-filter="corporate">Corporate</button>
+                <button class="filter-btn" data-filter="litigation">Litigation</button>
+                <button class="filter-btn" data-filter="specialized">Specialized</button>
+                <button class="filter-btn" data-filter="regulatory">Regulatory</button>
+            </div>
+
+            <!-- Practice Areas Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Litigation & Dispute Resolution -->
+                <div class="practice-card" data-category="litigation" data-aos="fade-up">
+                    <div class="practice-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Litigation & Dispute Resolution</h3>
+                    <p class="text-gray-400 mb-4">Comprehensive litigation services across civil, criminal, commercial, and constitutional matters with strategic case management.</p>
+                    <a href="#" class="text-primary hover:text-opacity-80 transition-colors">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+
+                <!-- Corporate & Commercial Laws -->
+                <div class="practice-card" data-category="corporate" data-aos="fade-up" data-aos-delay="100">
+                    <div class="practice-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Corporate & Commercial Laws</h3>
+                    <p class="text-gray-400 mb-4">Expert guidance on corporate governance, M&A, joint ventures, and commercial transactions for businesses of all sizes.</p>
+                    <a href="#" class="text-primary hover:text-opacity-80 transition-colors">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+
+                <!-- Real Estate & RERA -->
+                <div class="practice-card" data-category="regulatory" data-aos="fade-up" data-aos-delay="200">
+                    <div class="practice-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Real Estate & RERA</h3>
+                    <p class="text-gray-400 mb-4">Comprehensive real estate legal services including RERA compliance, property transactions, and dispute resolution.</p>
+                    <a href="#" class="text-primary hover:text-opacity-80 transition-colors">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+
+                <!-- Family & Succession Law -->
+                <div class="practice-card" data-category="specialized" data-aos="fade-up" data-aos-delay="300">
+                    <div class="practice-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Family & Succession Law</h3>
+                    <p class="text-gray-400 mb-4">Expert handling of family disputes, succession planning, inheritance matters, and estate administration.</p>
+                    <a href="#" class="text-primary hover:text-opacity-80 transition-colors">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+
+                <!-- Employment & Labour Law -->
+                <div class="practice-card" data-category="regulatory" data-aos="fade-up" data-aos-delay="400">
+                    <div class="practice-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Employment & Labour Law</h3>
+                    <p class="text-gray-400 mb-4">Comprehensive employment law services including contract drafting, compliance, and dispute resolution.</p>
+                    <a href="#" class="text-primary hover:text-opacity-80 transition-colors">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+
+                <!-- Banking & Finance -->
+                <div class="practice-card" data-category="corporate" data-aos="fade-up" data-aos-delay="500">
+                    <div class="practice-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Banking & Finance</h3>
+                    <p class="text-gray-400 mb-4">Expert legal services in banking regulations, financial transactions, and recovery proceedings.</p>
+                    <a href="#" class="text-primary hover:text-opacity-80 transition-colors">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+
+                <!-- Intellectual Property Rights -->
+                <div class="practice-card" data-category="specialized" data-aos="fade-up" data-aos-delay="600">
+                    <div class="practice-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Intellectual Property Rights</h3>
+                    <p class="text-gray-400 mb-4">Comprehensive IPR services including patents, trademarks, copyrights, and trade secrets management.</p>
+                    <a href="#" class="text-primary hover:text-opacity-80 transition-colors">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+
+                <!-- Insolvency & Bankruptcy -->
+                <div class="practice-card" data-category="corporate" data-aos="fade-up" data-aos-delay="700">
+                    <div class="practice-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Insolvency & Bankruptcy</h3>
+                    <p class="text-gray-400 mb-4">Expert guidance through complex insolvency proceedings and restructuring processes.</p>
+                    <a href="#" class="text-primary hover:text-opacity-80 transition-colors">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+
+                <!-- Arbitration & Mediation -->
+                <div class="practice-card" data-category="litigation" data-aos="fade-up" data-aos-delay="800">
+                    <div class="practice-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Arbitration & Mediation</h3>
+                    <p class="text-gray-400 mb-4">Alternative dispute resolution services through arbitration and mediation processes.</p>
+                    <a href="#" class="text-primary hover:text-opacity-80 transition-colors">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+
+                <!-- Contract Lifecycle Management -->
+                <div class="practice-card" data-category="corporate" data-aos="fade-up" data-aos-delay="900">
+                    <div class="practice-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Contract Lifecycle Management</h3>
+                    <p class="text-gray-400 mb-4">End-to-end contract management services from drafting to execution and compliance.</p>
+                    <a href="#" class="text-primary hover:text-opacity-80 transition-colors">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+
+                <!-- White Collar Crime -->
+                <div class="practice-card" data-category="litigation" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="practice-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">White Collar Crime</h3>
+                    <p class="text-gray-400 mb-4">Expert defense and advisory services in corporate fraud and financial crime cases.</p>
+                    <a href="#" class="text-primary hover:text-opacity-80 transition-colors">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+
+                <!-- Customs & Maritime Law -->
+                <div class="practice-card" data-category="regulatory" data-aos="fade-up" data-aos-delay="1100">
+                    <div class="practice-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Customs & Maritime Law</h3>
+                    <p class="text-gray-400 mb-4">Specialized legal services in customs regulations and maritime law matters.</p>
+                    <a href="#" class="text-primary hover:text-opacity-80 transition-colors">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+
+                <!-- Animal Law -->
+                <div class="practice-card" data-category="specialized" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="practice-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Animal Law</h3>
+                    <p class="text-gray-400 mb-4">Legal services related to animal rights, welfare laws, and regulations.</p>
+                    <a href="#" class="text-primary hover:text-opacity-80 transition-colors">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+
+                <!-- Constitutional Law -->
+                <div class="practice-card" data-category="litigation" data-aos="fade-up" data-aos-delay="1300">
+                    <div class="practice-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Constitutional Law</h3>
+                    <p class="text-gray-400 mb-4">Expert handling of constitutional rights and public law matters.</p>
+                    <a href="#" class="text-primary hover:text-opacity-80 transition-colors">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="img/whitebg.png" alt="Narayani Associates Logo" class="h-12 mb-4">
+                    <p class="text-gray-400 mb-4">Delivering excellence in legal services with integrity and dedication since 1998.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/narayani-associates/" target="_blank" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="practices.html" class="footer-link">Practice Areas</a></li>
+                        <li><a href="team.html" class="footer-link">Our Team</a></li>
+                        <li><a href="testimonials.html" class="footer-link">Testimonials</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Practice Areas</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link">Litigation & Dispute Resolution</a></li>
+                        <li><a href="#" class="footer-link">Corporate & Commercial Laws</a></li>
+                        <li><a href="#" class="footer-link">Real Estate & RERA</a></li>
+                        <li><a href="#" class="footer-link">Family & Succession Law</a></li>
+                        <li><a href="#" class="footer-link">Employment & Labour Law</a></li>
+                        <li><a href="#" class="footer-link">Banking & Finance</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for legal updates and insights.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-primary text-white flex-grow">
+                        <button type="submit" class="bg-primary px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition-all">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Narayani Associates. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Practice Areas Filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const practiceCards = document.querySelectorAll('.practice-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                practiceCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Mobile Menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 50) {
+                navbar.classList.add('bg-black');
+                navbar.classList.remove('bg-transparent');
+                
+                if (currentScroll > lastScroll) {
+                    navbar.style.transform = 'translateY(-100%)';
+                } else {
+                    navbar.style.transform = 'translateY(0)';
+                }
+            } else {
+                navbar.classList.remove('bg-black');
+                navbar.classList.add('bg-transparent');
+                navbar.style.transform = 'translateY(0)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
