@@ -468,9 +468,9 @@ h1, h2, h3, h4, h5, h6 {
 .expertise-tag {
     background: rgba(255, 111, 13, 0.1);
     color: var(--primary);
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
-    font-size: 0.875rem;
+    padding: 0.35rem 0.75rem;         /* smaller padding */
+    border-radius: 1.5rem;            /* slightly smaller pill shape */
+    font-size: 0.75rem;               /* smaller font */
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
     transition: all 0.3s ease;
