@@ -340,7 +340,7 @@
                         templateParams
                     );
 
-                    const response = await fetch('https://script.google.com/macros/s/AKfycbzRuW_boAew8r-88yEQmkOMnAq-Csh5WeDQsf2e_wLGr2ZEXbTONT-uYNZbwZnKG2bx/exec', {
+                    const response = await fetch('https://script.google.com/macros/s/AKfycby8nr-5y-NHSJhUGm62XHEk1L1Xswui5qAO-6yqPpP4l0TeT1Fg8L9Y8NCB5Rt5gZKK/exec', {
                         method: 'POST',
                         body: JSON.stringify({ email }),
                         headers: { 'Content-Type': 'application/json' }
