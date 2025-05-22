@@ -296,27 +296,17 @@
         newsletterForms.forEach(form => {
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
-                
+            
                 const emailInput = form.querySelector('input[type="email"]');
                 const submitButton = form.querySelector('button[type="submit"]');
                 const originalButtonHTML = submitButton.innerHTML;
-                
+            
                 // Show loading state
                 submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
                 submitButton.disabled = true;
-                
-                // Get email
+            
                 const email = emailInput.value;
-                
-                // Basic validation
-                if (!email) {
-                    alert('Please enter your email address');
-                    submitButton.innerHTML = originalButtonHTML;
-                    submitButton.disabled = false;
-                    return;
-                }
-
-                // Email validation
+            
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(email)) {
                     alert('Please enter a valid email address');
@@ -324,46 +314,44 @@
                     submitButton.disabled = false;
                     return;
                 }
-
+            
                 try {
-                    // Send email using EmailJS
+                    // 1. Send with EmailJS
                     const templateParams = {
                         from_email: email,
                         to_name: 'Narayani Associates',
                         message: 'Newsletter subscription request',
                         subject: 'New Newsletter Subscription'
                     };
-
+            
                     await emailjs.send(
-                        'service_v280jqs', // Your EmailJS service ID
-                        'template_5ijkkd8', // Your EmailJS template ID
+                        'service_v280jqs',       // Your EmailJS service ID
+                        'template_5ijkkd8',      // Your EmailJS template ID
                         templateParams
                     );
-
-                    const response = await fetch('https://script.google.com/macros/s/AKfycbzcB2mOXcAvcZYMrrabiXTBsuXbc63Pd0bs7Tp1vcNjIayEpTgF06jwMmF8mO_xiq3N/exec', {
+            
+                    // 2. Send to Sheet.best (Google Sheets)
+                    const response = await fetch('https://api.sheetbest.com/sheets/03134ab4-b14e-42ac-afc7-074cad9fe647', {
                         method: 'POST',
-                        body: JSON.stringify({ email }),
-                        headers: { 'Content-Type': 'application/json' }
-                      });
-                
-                      const result = await response.json();
-                      console.log('Google Sheets response:', result);
-
-                
-                      if (result.result !== 'success') {
-                        throw new Error('Failed to save subscription to Google Sheets');
-                      }
-
-                    // Show success message
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ email })
+                    });
+            
+                    const result = await response.json();
+                    console.log('Sheet.best response:', result);
+            
+                    // 3. Show success message
                     alert('Thank you for subscribing to our newsletter!');
                     form.reset();
                 } catch (error) {
                     console.error('Newsletter subscription failed:', error);
-                    alert('There was an error subscribing to the newsletter. Please try again later.');
+                    alert('There was an error subscribing. Please try again later.');
                 } finally {
-                    // Reset button state
                     submitButton.innerHTML = originalButtonHTML;
                     submitButton.disabled = false;
                 }
             });
+            
         });
