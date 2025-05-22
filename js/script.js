@@ -301,11 +301,10 @@
                 const submitButton = form.querySelector('button[type="submit"]');
                 const originalButtonHTML = submitButton.innerHTML;
             
-                // Show loading state
                 submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
                 submitButton.disabled = true;
             
-                const email = emailInput.value;
+                const email = emailInput.value.trim();
             
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(email)) {
@@ -330,21 +329,30 @@
                         templateParams
                     );
             
-                    // 2. Send to Sheet.best (Google Sheets)
-                    const response = await fetch('https://api.sheetbest.com/sheets/03134ab4-b14e-42ac-afc7-074cad9fe647', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ email })
-                    });
-            
-                    const result = await response.json();
-                    console.log('Sheet.best response:', result);
-            
-                    // 3. Show success message
-                    alert('Thank you for subscribing to our newsletter!');
-                    form.reset();
+                    // 2. Check if email already exists in Sheet.best
+                    const sheetResponse = await fetch('https://api.sheetbest.com/sheets/03134ab4-b14e-42ac-afc7-074cad9fe647');
+                    const existingEmails = await sheetResponse.json();
+        
+                    // Check if email is already subscribed
+                    const emailExists = existingEmails.some(entry => entry.email?.toLowerCase() === email.toLowerCase());
+        
+                    if (emailExists) {
+                        alert('You have already subscribed to the newsletter.');
+                    } else {
+                        // 3. If not, add email to Sheet.best
+                        const postResponse = await fetch('https://api.sheetbest.com/sheets/03134ab4-b14e-42ac-afc7-074cad9fe647', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ email })
+                        });
+        
+                        if (!postResponse.ok) throw new Error('Failed to save subscription.');
+        
+                        alert('Thank you for subscribing to our newsletter!');
+                        form.reset();
+                    }
                 } catch (error) {
                     console.error('Newsletter subscription failed:', error);
                     alert('There was an error subscribing. Please try again later.');
@@ -353,5 +361,5 @@
                     submitButton.disabled = false;
                 }
             });
-            
         });
+        
