@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
     <style>
         .practice-filter {
             display: flex;
@@ -77,6 +77,12 @@
     </style>
 </head>
 <body>
+
+     <!-- Custom Cursor Elements -->
+
+     <div class="cursor"></div>
+
+     <div class="cursor-dot"></div>
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent" id="navbar">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -435,6 +441,71 @@
             
             lastScroll = currentScroll;
         });
+    </script>
+     <!-- Custom Cursor Script -->
+
+     <script>
+
+        const cursor = document.querySelector('.cursor');
+
+        const cursorDot = document.querySelector('.cursor-dot');
+
+        
+
+        document.addEventListener('mousemove', (e) => {
+
+            cursor.style.left = e.clientX + 'px';
+
+            cursor.style.top = e.clientY + 'px';
+
+            cursorDot.style.left = e.clientX + 'px';
+
+            cursorDot.style.top = e.clientY + 'px';
+
+        });
+
+
+
+        // Add hover effect for interactive elements
+
+        const interactiveElements = document.querySelectorAll('a, button, [role="button"], input, textarea');
+
+        interactiveElements.forEach(element => {
+
+            element.addEventListener('mouseenter', () => {
+
+                cursor.classList.add('hover');
+
+            });
+
+            
+
+            element.addEventListener('mouseleave', () => {
+
+                cursor.classList.remove('hover');
+
+            });
+
+        });
+
+
+
+        // Add click effect
+
+        document.addEventListener('mousedown', () => {
+
+            cursor.classList.add('click');
+
+        });
+
+        
+
+        document.addEventListener('mouseup', () => {
+
+            cursor.classList.remove('click');
+
+        });
+
     </script>
 </body>
 </html>
