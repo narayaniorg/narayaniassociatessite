@@ -340,19 +340,7 @@
                         templateParams
                     );
 
-                    const response = await fetch('https://script.google.com/macros/s/AKfycbzRuW_boAew8r-88yEQmkOMnAq-Csh5WeDQsf2e_wLGr2ZEXbTONT-uYNZbwZnKG2bx/exec', {
-                        method: 'POST',
-                        body: JSON.stringify({ email }),
-                        headers: { 'Content-Type': 'application/json' }
-                      });
-                
-                      const result = await response.json();
-                      console.log('Google Sheets response:', result);
-
-                
-                      if (result.result !== 'success') {
-                        throw new Error('Failed to save subscription to Google Sheets');
-                      }
+                    
 
                     // Show success message
                     alert('Thank you for subscribing to our newsletter!');
