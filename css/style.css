@@ -1,0 +1,74 @@
+/* Navbar Styles */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    transition: all 0.3s ease;
+}
+
+#navbar.bg-transparent {
+    background-color: transparent;
+}
+
+#navbar.bg-black {
+    background-color: black;
+}
+
+#navbar .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+#navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #D4AF37;
+    transition: width 0.3s ease;
+}
+
+#navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 60;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu .mobile-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu .mobile-link:hover {
+    color: #D4AF37;
+}
+
+/* Rest of your existing styles */ 

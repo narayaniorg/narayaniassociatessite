@@ -13,58 +13,22 @@
 </head>
 <body>
 
-    
-
-     
-
- 
-
-
-
     <!-- Custom Cursor Elements -->
-
     <div class="cursor"></div>
-
     <div class="cursor-dot"></div>
 
+    <!-- Loading Animation -->
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent" id="navbar">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-3">
-                <img src="img/whitebg.png" alt="Narayani Associates" class="h-12">
-                <div class="flex flex-col">
-                    <span class="text-2xl font-bold text-white">NARAYANI</span>
-                    <span class="text-primary text-xl">ASSOCIATES</span>
-                </div>
-            </a>
-            <div class="hidden md:flex space-x-4">
-                <a href="about.html" class="nav-link">About</a>
-                <a href="practices.html" class="nav-link">Practice Areas</a>
-                <a href="team.html" class="nav-link">Our Team</a>
-                <a href="testimonials.html" class="nav-link text-primary">Testimonials</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-     <!-- Mobile Menu -->
-     <div class="mobile-menu" id="mobile-menu">
-        <div class="container mx-auto px-4 py-8">
-            <div class="flex justify-end mb-8">
-                <button id="close-menu" class="text-white focus:outline-none">
-                    <i class="fas fa-times text-3xl"></i>
-                </button>
-            </div>
-            <div class="flex flex-col space-y-6 items-center text-xl">
-                <a href="about.html" class="nav-link mobile-link">About</a>
-                <a href="practices.html" class="nav-link mobile-link">Practice Areas</a>
-                <a href="team.html" class="nav-link mobile-link">Our Team</a>
-                <a href="testimonials.html" class="nav-link mobile-link">Testimonials</a>
-                <a href="contact.html" class="nav-link mobile-link">Contact</a>
-            </div>
-        </div>
-    </div>
+<div id="navbar-placeholder"></div>
 
     <!-- Page Header -->
     <section class="page-header d-flex align-items-center position-relative">
@@ -226,169 +190,26 @@
         </div>
     </section>
 
- 
+    <!-- Modal Placeholder -->
+    <div id="modal-placeholder"></div>
 
     <!-- Footer -->
-    <footer class="bg-black py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <img src="img/whitebg.png" alt="Narayani Associates" class="h-12 mb-4">
-                    <p class="text-gray-400 mb-4">Delivering excellence in legal services with integrity and dedication since 1998.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="footer-link">About Us</a></li>
-                        <li><a href="practices.html" class="footer-link">Practice Areas</a></li>
-                        <li><a href="team.html" class="footer-link">Our Team</a></li>
-                        <li><a href="testimonials.html" class="footer-link">Testimonials</a></li>
-                        <li><a href="contact.html" class="footer-link">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Practice Areas</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="footer-link">Litigation & Dispute Resolution</a></li>
-                        <li><a href="#" class="footer-link">Corporate & Commercial Laws</a></li>
-                        <li><a href="#" class="footer-link">Real Estate & Property Laws</a></li>
-                        <li><a href="#" class="footer-link">Succession Planning</a></li>
-                        <li><a href="#" class="footer-link">Family Laws</a></li>
-                        <li><a href="#" class="footer-link">Banking & Finance</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Newsletter</h4>
-                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for legal updates and insights.</p>
-                    <form class="flex newsletter-form">
-                        <input type="email" placeholder="Your email" class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-primary text-white flex-grow">
-                        <button type="submit" class="bg-primary px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition-all">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2024 Narayani Associates. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/ui-components.js"></script>
+    <script src="js/script.js"></script>
+    <script src="./js/cursorscript.js"></script>
     <script>
+        // Initialize AOS
         AOS.init({
             duration: 1000,
             once: true
         });
-
-        // Navbar Background Change on Scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-black');
-                navbar.classList.remove('bg-transparent');
-            } else {
-                navbar.classList.remove('bg-black');
-                navbar.classList.add('bg-transparent');
-            }
-        });
     </script>
-     <!-- Scripts -->
-
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-     <script src="js/script.js"></script>
-
-    
-
-    <!-- Custom Cursor Script -->
-
-    <script>
-
-        const cursor = document.querySelector('.cursor');
-
-        const cursorDot = document.querySelector('.cursor-dot');
-
-        
-
-        document.addEventListener('mousemove', (e) => {
-
-            cursor.style.left = e.clientX + 'px';
-
-            cursor.style.top = e.clientY + 'px';
-
-            cursorDot.style.left = e.clientX + 'px';
-
-            cursorDot.style.top = e.clientY + 'px';
-
-        });
-
-
-
-        // Add hover effect for interactive elements
-
-        const interactiveElements = document.querySelectorAll('a, button, [role="button"], input, textarea');
-
-        interactiveElements.forEach(element => {
-
-            element.addEventListener('mouseenter', () => {
-
-                cursor.classList.add('hover');
-
-            });
-
-            
-
-            element.addEventListener('mouseleave', () => {
-
-                cursor.classList.remove('hover');
-
-            });
-
-        });
-
-
-
-        // Add click effect
-
-        document.addEventListener('mousedown', () => {
-
-            cursor.classList.add('click');
-
-        });
-
-        
-
-        document.addEventListener('mouseup', () => {
-
-            cursor.classList.remove('click');
-
-        });
-
-    </script>
-    
 </body>
 </html> 

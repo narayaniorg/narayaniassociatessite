@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
+
 </head>
+
 <body>
     <!-- Loading Animation -->
     <div class="loading">
@@ -22,56 +26,17 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
-    <!-- Disclaimer Modal -->
-    <div id="disclaimerModal" class="disclaimer-modal">
-        <div class="disclaimer-content">
-            <h2>Disclaimer</h2>
-            <div class="disclaimer-text">
-                <p>The Bar Council of India does not permit advertisement or solicitation by advocates in any form or manner. By accessing this website, www.nalaw.in, you acknowledge and confirm that you are seeking information relating to Narayani Associates of your own accord and that there has been no form of solicitation, advertisement or inducement by Narayani Associates or its members.</p>
-                <p>The content of this website is for informational purposes only and should not be interpreted as soliciting or advertisement. No material/information provided on this website should be construed as legal advice. Narayani Associates shall not be liable for consequences of any action taken by relying on the material/information provided on this website.</p>
-                <p>The contents of this website are the intellectual property of Narayani Associates.</p>
-            </div>
-            <div class="disclaimer-checkbox">
-                <input type="checkbox" id="disclaimerAccept">
-                <label for="disclaimerAccept">I accept the above.</label>
-            </div>
-            <div class="disclaimer-buttons">
-                <button class="disclaimer-btn proceed" id="proceedToWebsite" disabled>Proceed To Website</button>
-            </div>
-        </div>
-    </div>
+    <div id="modal-placeholder"></div>
 
     <!-- Custom Cursor Elements -->
     <div class="cursor"></div>
     <div class="cursor-dot"></div>
-    
+
     <!-- Add particles.js container -->
     <div id="particles-js"></div>
-    
+
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent" id="navbar">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-3">
-                <img src="img/whitebg.png" alt="Narayani Associates Logo" class="h-12">
-                <div class="flex flex-col">
-                <span class="text-2xl font-bold text-white">NARAYANI</span>
-                    <span class="text-primary text-xl">ASSOCIATES</span>
-                </div>
-            </a>
-            <div class="hidden md:flex space-x-4">
-                <a href="about.html" class="nav-link">About</a>
-                <a href="practices.html" class="nav-link">Practice Areas</a>
-                <a href="team.html" class="nav-link">Our Team</a>
-                <a href="testimonials.html" class="nav-link">Testimonials</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-            <div class="md:hidden">
-                <button id="menu-toggle" class="text-white focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar-placeholder"></div>
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
@@ -101,7 +66,7 @@
                 </h1>
                 <h2 class="text-2xl mb-8 text-gray-300 typing-effect" id="typing-text"></h2>
                 <p class="text-lg mb-8 text-gray-300">
-                    Since our founding, we have grown into a trusted legal partner for 
+                    Since our founding, we have grown into a trusted legal partner for
                     individuals, startups, corporations, and institutions, handling matters that
                     range from everyday legal queries to the most complex litigation and
                     advisory mandates.
@@ -113,8 +78,11 @@
             </div>
         </div>
         <div class="animated-wave">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
             </svg>
         </div>
     </section>
@@ -131,8 +99,8 @@
                     <h3 class="text-4xl font-bold mb-6">A Legacy of Trust. A Future of Excellence.</h3>
                     <p class="text-gray-300 mb-6">
                         Narayani Associates is a law firm with a legacy of delivering impactful legal
-                        solutions. We combine traditional values of integrity, discretion, and discipline with a modern, 
-                        results-oriented approach. Our work is driven by deep legal knowledge, industry insight, 
+                        solutions. We combine traditional values of integrity, discretion, and discipline with a modern,
+                        results-oriented approach. Our work is driven by deep legal knowledge, industry insight,
                         and a personal commitment to each client's success.
                     </p>
                     <div class="mb-8">
@@ -140,17 +108,19 @@
                             <div class="mr-4 text-primary"><i class="fas fa-balance-scale text-2xl"></i></div>
                             <div>
                                 <h4 class="text-xl font-bold">Our Vision</h4>
-                                <p class="text-gray-400">To be recognized as a leading full service Indian law firm — not by scale,
-                                but by the quality of impact we create for every client, every time.</p>
+                                <p class="text-gray-400">To be recognized as a leading full service Indian law firm —
+                                    not by scale,
+                                    but by the quality of impact we create for every client, every time.</p>
                             </div>
                         </div>
                         <div class="flex items-center">
                             <div class="mr-4 text-primary"><i class="fas fa-bullseye text-2xl"></i></div>
                             <div>
                                 <h4 class="text-xl font-bold">Our Mission</h4>
-                                <p class="text-gray-400">To deliver effective, ethical, and efficient legal solutions with clarity and
-                                care. We aim to simplify legal processes for our clients and be their long-
-                                term advisors in every phase of business and life.</p>
+                                <p class="text-gray-400">To deliver effective, ethical, and efficient legal solutions
+                                    with clarity and
+                                    care. We aim to simplify legal processes for our clients and be their long-
+                                    term advisors in every phase of business and life.</p>
                             </div>
                         </div>
                     </div>
@@ -179,32 +149,37 @@
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
                 <h2 class="text-primary text-3xl mb-4 playfair">What Sets Us Apart</h2>
                 <h3 class="text-4xl font-bold mb-6">Our Core Strengths</h3>
-                <p class="text-gray-300">We are committed to excellence in every aspect of our practice. Our strengths lie in our deep expertise, unwavering commitment, and a result-driven approach.</p>
+                <p class="text-gray-300">We are committed to excellence in every aspect of our practice. Our strengths
+                    lie in our deep expertise, unwavering commitment, and a result-driven approach.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="p-6 rounded-lg bg-black shadow-lg" data-aos="fade-up" data-aos-delay="100">
                     <div class="mb-4 text-primary"><i class="fas fa-brain text-4xl"></i></div>
                     <h4 class="text-xl font-bold mb-3">Expertise</h4>
-                    <p class="text-gray-400">Deep knowledge across diverse legal areas, ensuring comprehensive coverage for all your legal needs.</p>
+                    <p class="text-gray-400">Deep knowledge across diverse legal areas, ensuring comprehensive coverage
+                        for all your legal needs.</p>
                 </div>
-                
+
                 <div class="p-6 rounded-lg bg-black shadow-lg" data-aos="fade-up" data-aos-delay="200">
                     <div class="mb-4 text-primary"><i class="fas fa-handshake text-4xl"></i></div>
                     <h4 class="text-xl font-bold mb-3">Commitment</h4>
-                    <p class="text-gray-400">Every case receives our focused attention, no matter how big or small. Your priorities are our priorities.</p>
+                    <p class="text-gray-400">Every case receives our focused attention, no matter how big or small. Your
+                        priorities are our priorities.</p>
                 </div>
-                
+
                 <div class="p-6 rounded-lg bg-black shadow-lg" data-aos="fade-up" data-aos-delay="300">
                     <div class="mb-4 text-primary"><i class="fas fa-shield-alt text-4xl"></i></div>
                     <h4 class="text-xl font-bold mb-3">Integrity</h4>
-                    <p class="text-gray-400">Ethical, transparent, and confidential service is the foundation of our practice and client relationships.</p>
+                    <p class="text-gray-400">Ethical, transparent, and confidential service is the foundation of our
+                        practice and client relationships.</p>
                 </div>
-                
+
                 <div class="p-6 rounded-lg bg-black shadow-lg" data-aos="fade-up" data-aos-delay="400">
                     <div class="mb-4 text-primary"><i class="fas fa-trophy text-4xl"></i></div>
                     <h4 class="text-xl font-bold mb-3">Results</h4>
-                    <p class="text-gray-400">A track record of successful outcomes across various practice areas and jurisdictions.</p>
+                    <p class="text-gray-400">A track record of successful outcomes across various practice areas and
+                        jurisdictions.</p>
                 </div>
             </div>
         </div>
@@ -216,9 +191,11 @@
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
                 <h2 class="text-primary text-3xl mb-4 playfair">Our Expertise</h2>
                 <h3 class="text-4xl font-bold mb-6">Practice Areas</h3>
-                <p class="text-gray-300">Narayani Associates offers comprehensive legal services across multiple domains. Our attorneys are specialized in their respective fields to provide you with expert advice and representation.</p>
+                <p class="text-gray-300">Narayani Associates offers comprehensive legal services across multiple
+                    domains. Our attorneys are specialized in their respective fields to provide you with expert advice
+                    and representation.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Practice Area 1 -->
                 <div class="practice-area p-6" data-aos="fade-up" data-aos-delay="100">
@@ -226,60 +203,72 @@
                         <div class="mr-4 text-primary"><i class="fas fa-gavel text-3xl"></i></div>
                         <h4 class="text-xl font-bold">Litigation & Dispute Resolution</h4>
                     </div>
-                    <p class="text-gray-400">We provide end-to-end litigation services across civil, criminal, commercial, and constitutional matters. Whether it's a local trial or a high-stakes appeal, our team prepares every case with precision and confidence.</p>
+                    <p class="text-gray-400">We provide end-to-end litigation services across civil, criminal,
+                        commercial, and constitutional matters. Whether it's a local trial or a high-stakes appeal, our
+                        team prepares every case with precision and confidence.</p>
                 </div>
-                
+
                 <!-- Practice Area 2 -->
                 <div class="practice-area p-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-center mb-4">
                         <div class="mr-4 text-primary"><i class="fas fa-building text-3xl"></i></div>
                         <h4 class="text-xl font-bold">Corporate & Commercial Laws</h4>
                     </div>
-                    <p class="text-gray-400">We advise companies, startups, and investors on a wide range of legal issues impacting business operations. From incorporation to compliance — and everything in between.</p>
+                    <p class="text-gray-400">We advise companies, startups, and investors on a wide range of legal
+                        issues impacting business operations. From incorporation to compliance — and everything in
+                        between.</p>
                 </div>
-                
+
                 <!-- Practice Area 3 -->
                 <div class="practice-area p-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex items-center mb-4">
                         <div class="mr-4 text-primary"><i class="fas fa-home text-3xl"></i></div>
                         <h4 class="text-xl font-bold">Real Estate & RERA</h4>
                     </div>
-                    <p class="text-gray-400">Real estate transactions and disputes require a deep understanding of both law and land. We ensure your rights are protected whether you're buying, selling, leasing, or litigating under RERA.</p>
+                    <p class="text-gray-400">Real estate transactions and disputes require a deep understanding of both
+                        law and land. We ensure your rights are protected whether you're buying, selling, leasing, or
+                        litigating under RERA.</p>
                 </div>
-                
+
                 <!-- Practice Area 4 -->
                 <div class="practice-area p-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="flex items-center mb-4">
                         <div class="mr-4 text-primary"><i class="fas fa-users text-3xl"></i></div>
                         <h4 class="text-xl font-bold">Family & Succession Law</h4>
                     </div>
-                    <p class="text-gray-400">We handle delicate family law matters with discretion and firmness—ensuring legal clarity while respecting emotional sensitivities. Our expertise covers succession planning, inheritance, and family disputes.</p>
+                    <p class="text-gray-400">We handle delicate family law matters with discretion and firmness—ensuring
+                        legal clarity while respecting emotional sensitivities. Our expertise covers succession
+                        planning, inheritance, and family disputes.</p>
                 </div>
-                
+
                 <!-- Practice Area 5 -->
                 <div class="practice-area p-6" data-aos="fade-up" data-aos-delay="500">
                     <div class="flex items-center mb-4">
                         <div class="mr-4 text-primary"><i class="fas fa-briefcase text-3xl"></i></div>
                         <h4 class="text-xl font-bold">Employment & Labour Law</h4>
                     </div>
-                    <p class="text-gray-400">We provide comprehensive legal support for employment matters, from contract drafting to dispute resolution, ensuring compliance with labor laws and protecting both employer and employee rights.</p>
+                    <p class="text-gray-400">We provide comprehensive legal support for employment matters, from
+                        contract drafting to dispute resolution, ensuring compliance with labor laws and protecting both
+                        employer and employee rights.</p>
                 </div>
-                
+
                 <!-- Practice Area 6 -->
                 <div class="practice-area p-6" data-aos="fade-up" data-aos-delay="600">
                     <div class="flex items-center mb-4">
                         <div class="mr-4 text-primary"><i class="fas fa-landmark text-3xl"></i></div>
                         <h4 class="text-xl font-bold">Banking & Finance</h4>
                     </div>
-                    <p class="text-gray-400">We assist in structuring, negotiating, and securing financial transactions, and represent clients in regulatory and recovery proceedings.</p>
+                    <p class="text-gray-400">We assist in structuring, negotiating, and securing financial transactions,
+                        and represent clients in regulatory and recovery proceedings.</p>
                 </div>
 
                 <!-- View All Button -->
                 <div class="col-span-1 md:col-span-2 lg:col-span-3 text-center mt-8">
-                    <a href="practices.html" class="btn-outline px-8 py-3 rounded-lg font-medium inline-flex items-center">
+                    <a href="practices.html"
+                        class="btn-outline px-8 py-3 rounded-lg font-medium inline-flex items-center">
                         View All Practice Areas
                         <i class="fas fa-arrow-right ml-2"></i>
-                    </a>                    
+                    </a>
                 </div>
             </div>
         </div>
@@ -293,16 +282,22 @@
                 <h3 class="text-4xl font-bold mb-6">The Legal Docket</h3>
                 <p class="text-gray-300">Your Trusted Source for Simplified Legal Insights</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="relative" data-aos="fade-right">
                     <div class="text-primary text-6xl mb-6">
                         <i class="fas fa-newspaper"></i>
                     </div>
                     <p class="text-gray-300 mb-8">
-                        We're proud to introduce The Legal Docket – a people-centric legal tabloid by Narayani Associates. Designed to make legal knowledge more accessible, this platform brings you simplified insights into complex laws, expert analysis of landmark judgments, regulatory updates, and industry-specific legal trends. Whether you're a business owner, legal professional, or simply curious about the legal world, The Legal Docket is your trusted source for staying informed and empowered. Let us know what legal topics you'd love to see covered!
+                        We're proud to introduce The Legal Docket – a people-centric legal tabloid by Narayani
+                        Associates. Designed to make legal knowledge more accessible, this platform brings you
+                        simplified insights into complex laws, expert analysis of landmark judgments, regulatory
+                        updates, and industry-specific legal trends. Whether you're a business owner, legal
+                        professional, or simply curious about the legal world, The Legal Docket is your trusted source
+                        for staying informed and empowered. Let us know what legal topics you'd love to see covered!
                     </p>
-                    <a href="https://www.linkedin.com/showcase/the-legal-docket" class="btn-primary px-8 py-3 rounded-lg font-medium inline-flex items-center">
+                    <a href="https://www.linkedin.com/showcase/the-legal-docket"
+                        class="btn-primary px-8 py-3 rounded-lg font-medium inline-flex items-center">
                         Explore The Legal Docket
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
@@ -313,12 +308,14 @@
                             <div class="feature-card p-6 rounded-lg bg-black">
                                 <div class="text-primary mb-4"><i class="fas fa-gavel text-3xl"></i></div>
                                 <h4 class="text-xl font-bold mb-3">Landmark Judgments</h4>
-                                <p class="text-gray-400">Expert analysis of significant court decisions and their implications</p>
+                                <p class="text-gray-400">Expert analysis of significant court decisions and their
+                                    implications</p>
                             </div>
                             <div class="feature-card p-6 rounded-lg bg-black">
                                 <div class="text-primary mb-4"><i class="fas fa-book text-3xl"></i></div>
                                 <h4 class="text-xl font-bold mb-3">Legal Updates</h4>
-                                <p class="text-gray-400">Stay informed about the latest changes in laws and regulations</p>
+                                <p class="text-gray-400">Stay informed about the latest changes in laws and regulations
+                                </p>
                             </div>
                             <div class="feature-card p-6 rounded-lg bg-black">
                                 <div class="text-primary mb-4"><i class="fas fa-chart-line text-3xl"></i></div>
@@ -337,41 +334,63 @@
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
                 <h2 class="text-primary text-3xl mb-4 playfair">Meet Our Experts</h2>
                 <h3 class="text-4xl font-bold mb-6">Our Partners & Team</h3>
-                <p class="text-gray-300">The team at Narayani Associates comprises bright and inquisitive minds waiting to make a difference. Our advocates are well versed in law and procedures and are result driven.</p>
+                <p class="text-gray-300">The team at Narayani Associates comprises bright and inquisitive minds waiting
+                    to make a difference. Our advocates are well versed in law and procedures and are result driven.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <!-- Partner 1 -->
-                <div class="partner-card flex flex-col md:flex-row bg-black rounded-lg overflow-hidden shadow-lg" data-aos="fade-up">
+                <div class="partner-card flex flex-col md:flex-row bg-black rounded-lg overflow-hidden shadow-lg"
+                    data-aos="fade-up">
                     <div class="md:w-2/5">
-                        <img src="./img/abhai.png" alt="Abhai Misra, Founder Partner" class="w-full h-full object-cover">
+                        <img src="./img/abhai.png" alt="Abhai Misra, Founder Partner"
+                            class="w-full h-full object-cover">
                     </div>
                     <div class="md:w-3/5 p-6 md:p-8">
                         <h4 class="text-2xl font-bold mb-2">Abhai Misra</h4>
                         <p class="text-primary font-medium mb-4">Founder Partner</p>
-                        <p class="italic text-gray-400 mb-4">"Litigation is not just about good arguments – it is about clarity, strategy and timing."</p>
-                        <p class="text-gray-300 mb-6">With over 25 years of experience, Abhai Misra is known for his commanding presence in the courtroom and a results-oriented approach to litigation. His strategic mind and sharp legal instincts have led to numerous favourable judgments across High Courts and Trial Courts & Tribunals.</p>
+                        <p class="italic text-gray-400 mb-4">"Litigation is not just about good arguments – it is about
+                            clarity, strategy and timing."</p>
+                        <p class="text-gray-300 mb-6">With over 25 years of experience, Abhai Misra is known for his
+                            commanding presence in the courtroom and a results-oriented approach to litigation. His
+                            strategic mind and sharp legal instincts have led to numerous favourable judgments across
+                            High Courts and Trial Courts & Tribunals.</p>
                         <div>
-                            <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-300 mr-2 mb-2">Civil Litigation</span>
-                            <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-300 mr-2 mb-2">Labour Laws</span>
+                            <span
+                                class="inline-block bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-300 mr-2 mb-2">Civil
+                                Litigation</span>
+                            <span
+                                class="inline-block bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-300 mr-2 mb-2">Labour
+                                Laws</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Partner 2 -->
-                <div class="partner-card flex flex-col md:flex-row bg-black rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                <div class="partner-card flex flex-col md:flex-row bg-black rounded-lg overflow-hidden shadow-lg"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="md:w-2/5">
-                        <img src="./img/raman.png" alt="Raman Misra, Founder Partner" class="w-full h-full object-cover">
+                        <img src="./img/raman.png" alt="Raman Misra, Founder Partner"
+                            class="w-full h-full object-cover">
                     </div>
                     <div class="md:w-3/5 p-6 md:p-8">
                         <h4 class="text-2xl font-bold mb-2">Raman Misra</h4>
                         <p class="text-primary font-medium mb-4">Founder Partner</p>
-                        <p class="italic text-gray-400 mb-4">"Legal solutions must be practical, not just theoretical."</p>
-                        <p class="text-gray-300 mb-6">A dynamic and solution-focused legal advisor, Raman Misra blends legal insight with business acumen. He has represented clients in high-value transactions both in India and abroad and is known to give practical and realistic opinions.</p>
+                        <p class="italic text-gray-400 mb-4">"Legal solutions must be practical, not just theoretical."
+                        </p>
+                        <p class="text-gray-300 mb-6">A dynamic and solution-focused legal advisor, Raman Misra blends
+                            legal insight with business acumen. He has represented clients in high-value transactions
+                            both in India and abroad and is known to give practical and realistic opinions.</p>
                         <div>
-                            <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-300 mr-2 mb-2">Civil Litigation</span>
-                            <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-300 mr-2 mb-2">Criminal Litigation</span>
-                            <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-300 mr-2 mb-2">Real Estate Laws</span>
+                            <span
+                                class="inline-block bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-300 mr-2 mb-2">Civil
+                                Litigation</span>
+                            <span
+                                class="inline-block bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-300 mr-2 mb-2">Criminal
+                                Litigation</span>
+                            <span
+                                class="inline-block bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-300 mr-2 mb-2">Real
+                                Estate Laws</span>
                         </div>
                     </div>
                 </div>
@@ -385,25 +404,28 @@
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
                 <h2 class="text-primary text-3xl mb-4 playfair">Our Network</h2>
                 <h3 class="text-4xl font-bold mb-6">Who Are Our Clients</h3>
-                <p class="text-gray-300">We are proud to serve a diverse range of clients across various sectors, from established corporations to innovative startups.</p>
+                <p class="text-gray-300">We are proud to serve a diverse range of clients across various sectors, from
+                    established corporations to innovative startups.</p>
             </div>
-            
+
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 <!-- Client 1 -->
                 <div class="client-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
                     <div class="client-logo mb-4">
-                        <img src="./img/client1.png" alt="Warmond" class="w-full h-24 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="./img/client1.png" alt="Warmond"
+                            class="w-full h-24 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
                     </div>
                     <div class="client-info text-center">
                         <h5 class="font-bold text-lg">Warmond</h5>
                         <p class="text-gray-500">Company</p>
                     </div>
                 </div>
-                
+
                 <!-- Client 2 -->
                 <div class="client-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
                     <div class="client-logo mb-4">
-                        <img src="./img/client2.png" alt="Reliance Industries" class="w-full h-24 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="./img/client2.png" alt="Reliance Industries"
+                            class="w-full h-24 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
                     </div>
                     <div class="client-info text-center">
                         <h5 class="font-bold text-lg">Phoenix Mills Limited</h5>
@@ -411,28 +433,30 @@
                     </div>
                 </div>
 
-                 <!-- Client 3 -->
-                 <div class="client-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                <!-- Client 3 -->
+                <div class="client-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
                     <div class="client-logo mb-4">
-                        <img src="./img/client3.jpg" alt="Intertec Systems LLC" class="w-full h-24 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="./img/client3.jpg" alt="Intertec Systems LLC"
+                            class="w-full h-24 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
                     </div>
                     <div class="client-info text-center">
                         <h5 class="font-bold text-lg">Intertec Systems LLC</h5>
                         <p class="text-gray-500">Company</p>
                     </div>
                 </div>
-                
-                 <!-- Client 4 -->
-                 <div class="client-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+
+                <!-- Client 4 -->
+                <div class="client-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
                     <div class="client-logo mb-4">
-                        <img src="./img/client4.jpg" alt="Ting Works LLP" class="w-full h-24 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="./img/client4.jpg" alt="Ting Works LLP"
+                            class="w-full h-24 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
                     </div>
                     <div class="client-info text-center">
                         <h5 class="font-bold text-lg">Ting Works LLP</h5>
                         <p class="text-gray-500">Company</p>
                     </div>
                 </div>
-              
+
             </div>
 
             <!-- Client Categories -->
@@ -440,19 +464,22 @@
                 <div class="category-card p-6 rounded-lg bg-gray-900">
                     <div class="text-primary mb-4"><i class="fas fa-building text-3xl"></i></div>
                     <h4 class="text-xl font-bold mb-3">Corporate Clients</h4>
-                    <p class="text-gray-400">We serve leading corporations across various sectors, providing comprehensive legal solutions for their complex business needs.</p>
+                    <p class="text-gray-400">We serve leading corporations across various sectors, providing
+                        comprehensive legal solutions for their complex business needs.</p>
                 </div>
-                
+
                 <div class="category-card p-6 rounded-lg bg-gray-900">
                     <div class="text-primary mb-4"><i class="fas fa-rocket text-3xl"></i></div>
                     <h4 class="text-xl font-bold mb-3">Startups</h4>
-                    <p class="text-gray-400">Supporting innovative startups with legal guidance, from incorporation to funding rounds and intellectual property protection.</p>
+                    <p class="text-gray-400">Supporting innovative startups with legal guidance, from incorporation to
+                        funding rounds and intellectual property protection.</p>
                 </div>
-                
+
                 <div class="category-card p-6 rounded-lg bg-gray-900">
                     <div class="text-primary mb-4"><i class="fas fa-users text-3xl"></i></div>
                     <h4 class="text-xl font-bold mb-3">Individual Clients</h4>
-                    <p class="text-gray-400">Providing personalized legal services to individuals for their personal and professional legal requirements.</p>
+                    <p class="text-gray-400">Providing personalized legal services to individuals for their personal and
+                        professional legal requirements.</p>
                 </div>
             </div>
         </div>
@@ -464,9 +491,10 @@
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
                 <h2 class="text-primary text-3xl mb-4 playfair">Get in Touch</h2>
                 <h3 class="text-4xl font-bold mb-6">Contact Us</h3>
-                <p class="text-gray-300">Have a legal question or need assistance? We're here to help. Reach out to us through any of the following channels.</p>
+                <p class="text-gray-300">Have a legal question or need assistance? We're here to help. Reach out to us
+                    through any of the following channels.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <!-- Contact Information -->
                 <div class="space-y-8" data-aos="fade-left">
@@ -512,7 +540,8 @@
                         <div class="d-flex flex-column gap-4">
                             <div>
                                 <h4 class="text-primary fw-medium">Mumbai Office</h4>
-                                <p class="text-gray-400 mb-2">46-E, Prospect Chambers Annexe, Fort<br>Mumbai - 400001</p>
+                                <p class="text-gray-400 mb-2">46-E, Prospect Chambers Annexe, Fort<br>Mumbai - 400001
+                                </p>
                             </div>
                             <div>
                                 <h4 class="text-primary fw-medium">Pune Office</h4>
@@ -520,7 +549,8 @@
                             </div>
                             <div>
                                 <h4 class="text-primary fw-medium">Prayagraj Office</h4>
-                                <p class="text-gray-400 mb-2">SF-6, Mahakali Apartments, 97 Stanley Road, Muirabad<br>Prayagraj - 211002</p>
+                                <p class="text-gray-400 mb-2">SF-6, Mahakali Apartments, 97 Stanley Road,
+                                    Muirabad<br>Prayagraj - 211002</p>
                             </div>
                         </div>
                     </div>
@@ -535,9 +565,11 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <img src="img/whitebg.png" alt="Narayani Associates Logo" class="h-12 mb-4">
-                    <p class="text-gray-400 mb-4">Delivering excellence in legal services with integrity and dedication since 1998.</p>
+                    <p class="text-gray-400 mb-4">Delivering excellence in legal services with integrity and dedication
+                        since 1998.</p>
                     <div class="flex space-x-4">
-                        <a href="https://www.linkedin.com/company/narayani-associates/" target="_blank" class="social-icon" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/company/narayani-associates/" target="_blank"
+                            class="social-icon" aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                         <a href="#" class="social-icon" aria-label="Twitter">
@@ -551,7 +583,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
@@ -562,7 +594,7 @@
                         <li><a href="contact.html" class="footer-link">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="text-xl font-bold mb-4">Practice Areas</h4>
                     <ul class="space-y-2">
@@ -574,19 +606,23 @@
                         <li><a href="#" class="footer-link">Banking & Finance</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="text-xl font-bold mb-4">Newsletter</h4>
                     <p class="text-gray-400 mb-4">Subscribe to our newsletter for legal updates and insights.</p>
-                    <form class="flex newsletter-form">
-                        <input type="email" placeholder="Your email" class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-primary text-white flex-grow">
-                        <button type="submit" class="bg-primary px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition-all">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
+                    <form class="newsletter-form" id="footer-newsletter-form">
+                        <div class="flex">
+                            <input type="email" name="email" placeholder="Your email"
+                                class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-primary text-white flex-grow" required>
+                            <button type="submit"
+                                class="bg-primary px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition-all">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 mt-12 pt-8 text-center">
                 <p class="text-gray-400">&copy; 2024 Narayani Associates. All rights reserved.</p>
             </div>
@@ -597,6 +633,93 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/ui-components.js"></script>
     <script src="js/script.js"></script>
+    <script src="./js/cursorscript.js"></script>
+
+    <!-- Newsletter Script for Index Page -->
+    <script>
+        // Initialize EmailJS
+        (function() {
+            emailjs.init("uTTToUvth5zoNBAth");
+        })();
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsletterForm = document.getElementById('footer-newsletter-form');
+            
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const emailInput = this.querySelector('input[type="email"]');
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    const originalButtonHTML = submitButton.innerHTML;
+                    
+                    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+                    submitButton.disabled = true;
+                    
+                    const email = emailInput.value.trim();
+                    
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        alert('Please enter a valid email address');
+                        submitButton.innerHTML = originalButtonHTML;
+                        submitButton.disabled = false;
+                        return;
+                    }
+                    
+                    try {
+                        // 1. Send with EmailJS
+                        const templateParams = {
+                            from_email: email,
+                            to_name: 'Narayani Associates',
+                            message: 'Newsletter subscription request',
+                            subject: 'New Newsletter Subscription'
+                        };
+                        
+                        await emailjs.send(
+                            'service_v280jqs',
+                            'template_5ijkkd8',
+                            templateParams
+                        );
+                        
+                        // 2. Check if email already exists in Sheet.best
+                        const sheetResponse = await fetch('https://api.sheetbest.com/sheets/03134ab4-b14e-42ac-afc7-074cad9fe647');
+                        const existingEmails = await sheetResponse.json();
+                        
+                        // Check if email is already subscribed
+                        const emailExists = existingEmails.some(entry => entry.email?.toLowerCase() === email.toLowerCase());
+                        
+                        if (emailExists) {
+                            alert('You have already subscribed to the newsletter.');
+                        } else {
+                            // 3. If not, add email to Sheet.best
+                            const postResponse = await fetch('https://api.sheetbest.com/sheets/03134ab4-b14e-42ac-afc7-074cad9fe647', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ email })
+                            });
+                            
+                            if (!postResponse.ok) throw new Error('Failed to save subscription.');
+                            
+                            alert('Thank you for subscribing to our newsletter!');
+                            newsletterForm.reset();
+                        }
+                    } catch (error) {
+                        console.error('Newsletter subscription failed:', error);
+                        alert('There was an error subscribing. Please try again later.');
+                    } finally {
+                        submitButton.innerHTML = originalButtonHTML;
+                        submitButton.disabled = false;
+                    }
+                });
+            }
+        });
+    </script>
 </body>
+
 </html>

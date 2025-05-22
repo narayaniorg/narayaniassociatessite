@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,53 +9,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
 </head>
+
 <body>
-     <!-- Custom Cursor Elements -->
+    <!-- Custom Cursor Elements -->
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
 
-     <div class="cursor"></div>
-
-     <div class="cursor-dot"></div>
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent" id="navbar">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-3">
-                <img src="img/whitebg.png" alt="Narayani Associates" class="h-12">
-                <div class="flex flex-col">
-                    <span class="text-2xl font-bold text-white">NARAYANI</span>
-                    <span class="text-primary text-xl">ASSOCIATES</span>
-                </div>
-            </a>
-            <div class="hidden md:flex space-x-4">
-                <a href="about.html" class="nav-link">About</a>
-                <a href="practices.html" class="nav-link">Practice Areas</a>
-                <a href="team.html" class="nav-link text-primary">Our Team</a>
-                <a href="testimonials.html" class="nav-link">Testimonials</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-     <!-- Mobile Menu -->
-     <div class="mobile-menu" id="mobile-menu">
-        <div class="container mx-auto px-4 py-8">
-            <div class="flex justify-end mb-8">
-                <button id="close-menu" class="text-white focus:outline-none">
-                    <i class="fas fa-times text-3xl"></i>
-                </button>
-            </div>
-            <div class="flex flex-col space-y-6 items-center text-xl">
-                <a href="about.html" class="nav-link mobile-link">About</a>
-                <a href="practices.html" class="nav-link mobile-link">Practice Areas</a>
-                <a href="team.html" class="nav-link mobile-link">Our Team</a>
-                <a href="testimonials.html" class="nav-link mobile-link">Testimonials</a>
-                <a href="contact.html" class="nav-link mobile-link">Contact</a>
-            </div>
-        </div>
+    <!-- Loading Animation -->
+    <div class="loading">
+        <div class="loading-spinner"></div>
     </div>
 
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <div id="navbar-placeholder"></div>
     <!-- Page Header -->
     <header class="page-header flex items-center">
         <div class="col-12 text-center" data-aos="fade-up">
@@ -74,7 +49,7 @@
                 <button class="filter-btn px-6 py-2 rounded-full active" data-filter="all">All Members</button>
                 <button class="filter-btn px-6 py-2 rounded-full" data-filter="partners">Partners</button>
                 <button class="filter-btn px-6 py-2 rounded-full" data-filter="associates">Associates</button>
-               
+
             </div>
         </div>
     </section>
@@ -99,7 +74,8 @@
                         <h3 class="text-xl font-bold mb-2">Abhai Misra</h3>
                         <p class="text-primary font-medium mb-4">Founder Partner</p>
                         <p class="text-gray-300 mb-4">
-                            With over 25 years of experience, Abhai is known for his commanding presence in the courtroom and strategic approach to litigation.
+                            With over 25 years of experience, Abhai is known for his commanding presence in the
+                            courtroom and strategic approach to litigation.
                         </p>
                         <div class="flex flex-wrap">
                             <span class="expertise-tag">Civil Litigation</span>
@@ -110,7 +86,8 @@
                 </div>
 
                 <!-- Partner 2 -->
-                <div class="team-card rounded-lg overflow-hidden" data-category="partners" data-aos="fade-up" data-aos-delay="100">
+                <div class="team-card rounded-lg overflow-hidden" data-category="partners" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div class="team-image">
                         <img src="./img/raman.png" alt="Raman Misra" class="w-full h-[400px] object-cover">
                         <div class="team-overlay">
@@ -125,7 +102,8 @@
                         <h3 class="text-xl font-bold mb-2">Raman Misra</h3>
                         <p class="text-primary font-medium mb-4">Founder Partner</p>
                         <p class="text-gray-300 mb-4">
-                            A dynamic legal advisor with expertise in corporate law and real estate transactions, Raman brings practical solutions to complex legal challenges.
+                            A dynamic legal advisor with expertise in corporate law and real estate transactions, Raman
+                            brings practical solutions to complex legal challenges.
                         </p>
                         <div class="flex flex-wrap">
                             <span class="expertise-tag">Corporate Law</span>
@@ -137,13 +115,16 @@
 
 
                 <!-- Associate -->
-                <div class="team-card rounded-lg overflow-hidden" data-category="associates" data-aos="fade-up" data-aos-delay="300">
+                <div class="team-card rounded-lg overflow-hidden" data-category="associates" data-aos="fade-up"
+                    data-aos-delay="300">
                     <div class="team-image">
                         <img src="./img/manisha.jpg" alt="Manisha Solanke" class="w-full h-[400px] object-cover">
                         <div class="team-overlay">
                             <div class="social-links">
-                                <a href="https://www.linkedin.com/in/manisha-solanke/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="mailto:Manisha@nalaw.in" class="social-link"><i class="fas fa-envelope"></i></a>
+                                <a href="https://www.linkedin.com/in/manisha-solanke/" class="social-link"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a href="mailto:Manisha@nalaw.in" class="social-link"><i
+                                        class="fas fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
@@ -151,27 +132,30 @@
                         <h3 class="text-xl font-bold mb-2">Manisha Solanke</h3>
                         <p class="text-primary font-medium mb-4">Associate</p>
                         <p class="text-gray-300 mb-4">
-                            Practicing since Feb 2023, specializing in Family & Civil Law with expertise in dispute resolution and IP.                            
+                            Practicing since Feb 2023, specializing in Family & Civil Law with expertise in dispute
+                            resolution and IP.
                         </p>
                         <div class="flex flex-wrap">
                             <span class="expertise-tag">Succession</span>
                             <span class="expertise-tag">Dispute Resolution</span>
                             <span class="expertise-tag">IP LAW</span>
                             <span class="expertise-tag">Insolvency & Bankruptcy</span>
-                            
+
                         </div>
                     </div>
                 </div>
 
-               
+
 
                 <!-- Associate -->
-                <div class="team-card rounded-lg overflow-hidden" data-category="associates" data-aos="fade-up" data-aos-delay="500">
+                <div class="team-card rounded-lg overflow-hidden" data-category="associates" data-aos="fade-up"
+                    data-aos-delay="500">
                     <div class="team-image">
                         <img src="./img/akshay.jpg" alt="Akshay Chorge" class="w-full h-[400px] object-cover">
                         <div class="team-overlay">
                             <div class="social-links">
-                                <a href="https://www.linkedin.com/in/akshay-chorge-968366231" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.linkedin.com/in/akshay-chorge-968366231" class="social-link"><i
+                                        class="fab fa-linkedin-in"></i></a>
                                 <a href="mailto:Akshay@nalaw.in" class="social-link"><i class="fas fa-envelope"></i></a>
                             </div>
                         </div>
@@ -180,7 +164,8 @@
                         <h3 class="text-xl font-bold mb-2">Akshay Chorge</h3>
                         <p class="text-primary font-medium mb-4">Associate</p>
                         <p class="text-gray-300 mb-4">
-                            Practicing since Oct 2024, a young yet dedicated lawyer known for professionalism and commitment to every case.
+                            Practicing since Oct 2024, a young yet dedicated lawyer known for professionalism and
+                            commitment to every case.
                         </p>
                         <div class="flex flex-wrap">
                             <span class="expertise-tag">Real Estate</span>
@@ -199,148 +184,68 @@
             <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
                 <h2 class="text-3xl font-bold mb-6">Join Our Team</h2>
                 <p class="text-gray-300 mb-8">
-                    We're always looking for talented legal professionals to join our team. If you're passionate about law and committed to excellence, we'd love to hear from you.
+                    We're always looking for talented legal professionals to join our team. If you're passionate about
+                    law and committed to excellence, we'd love to hear from you.
                 </p>
-                <a href="contact.html" class="inline-block bg-primary px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-all">
+                <a href="contact.html"
+                    class="inline-block bg-primary px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-all">
                     View Career Opportunities
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-black py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <img src="img/whitebg.png" alt="Narayani Associates" class="h-12 mb-4">
-                    <p class="text-gray-400 mb-4">Delivering excellence in legal services with integrity and dedication since 1998.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="footer-link">About Us</a></li>
-                        <li><a href="practices.html" class="footer-link">Practice Areas</a></li>
-                        <li><a href="team.html" class="footer-link">Our Team</a></li>
-                        <li><a href="testimonials.html" class="footer-link">Testimonials</a></li>
-                        <li><a href="contact.html" class="footer-link">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Practice Areas</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="footer-link">Litigation & Dispute Resolution</a></li>
-                        <li><a href="#" class="footer-link">Corporate & Commercial Laws</a></li>
-                        <li><a href="#" class="footer-link">Real Estate & Property Laws</a></li>
-                        <li><a href="#" class="footer-link">Succession Planning</a></li>
-                        <li><a href="#" class="footer-link">Family Laws</a></li>
-                        <li><a href="#" class="footer-link">Banking & Finance</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Newsletter</h4>
-                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for legal updates and insights.</p>
-                    <form class="flex newsletter-form">
-                        <input type="email" placeholder="Your email" class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-primary text-white flex-grow">
-                        <button type="submit" class="bg-primary px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition-all">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2024 Narayani Associates. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Modal Placeholder -->
+    <div id="modal-placeholder"></div>
+
+    <div id="footer-placeholder"></div>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/ui-components.js"></script>
     <script src="js/script.js"></script>
-     <!-- Custom Cursor Script -->
-
-     <script>
-
-        const cursor = document.querySelector('.cursor');
-
-        const cursorDot = document.querySelector('.cursor-dot');
-
-        
-
-        document.addEventListener('mousemove', (e) => {
-
-            cursor.style.left = e.clientX + 'px';
-
-            cursor.style.top = e.clientY + 'px';
-
-            cursorDot.style.left = e.clientX + 'px';
-
-            cursorDot.style.top = e.clientY + 'px';
-
+    <script src="./js/cursorscript.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
         });
 
+        // Team Filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const teamCards = document.querySelectorAll('.team-card');
 
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
 
-        // Add hover effect for interactive elements
+                const filter = button.getAttribute('data-filter');
 
-        const interactiveElements = document.querySelectorAll('a, button, [role="button"], input, textarea');
-
-        interactiveElements.forEach(element => {
-
-            element.addEventListener('mouseenter', () => {
-
-                cursor.classList.add('hover');
-
+                teamCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
             });
-
-            
-
-            element.addEventListener('mouseleave', () => {
-
-                cursor.classList.remove('hover');
-
-            });
-
         });
-
-
-
-        // Add click effect
-
-        document.addEventListener('mousedown', () => {
-
-            cursor.classList.add('click');
-
-        });
-
-        
-
-        document.addEventListener('mouseup', () => {
-
-            cursor.classList.remove('click');
-
-        });
-
     </script>
 </body>
-</html> 
+
+</html>
