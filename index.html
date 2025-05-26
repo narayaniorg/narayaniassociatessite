@@ -505,14 +505,8 @@
                                 <i class="fas fa-envelope text-primary me-3 fa-lg"></i>
                                 <div>
                                     <p class="text-gray-400 mb-1">Email us at:</p>
-                                    <p class="text-gray-400 mb-0">connect@nalaw.in</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-globe text-primary me-3 fa-lg"></i>
-                                <div>
-                                    <p class="text-gray-400 mb-1">Visit our website:</p>
-                                    <p class="text-gray-400 mb-0">www.nalaw.in</p>
+                                    <p class="text-gray-400 mb-0"><a href="mailto:connect@nalaw.in">connect@nalaw.in</a>
+                                    </p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center">
@@ -526,7 +520,12 @@
                                 <i class="fab fa-linkedin text-primary me-3 fa-lg"></i>
                                 <div>
                                     <p class="text-gray-400 mb-1">Connect on LinkedIn:</p>
-                                    <p class="text-gray-400 mb-0">Narayani Associates</p>
+                                    <p class="text-gray-400 mb-0">
+                                        <a href="https://www.linkedin.com/company/narayani-associates" target="_blank"
+                                            rel="noopener noreferrer">
+                                            Narayani Associates
+                                        </a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -540,17 +539,30 @@
                         <div class="d-flex flex-column gap-4">
                             <div>
                                 <h4 class="text-primary fw-medium">Mumbai Office</h4>
-                                <p class="text-gray-400 mb-2">46-E, Prospect Chambers Annexe, Fort<br>Mumbai - 400001
+                                <p class="text-gray-400 mb-2">
+                                    <a href="https://maps.app.goo.gl/tktxsDSjVTfr7tNN9" target="_blank"
+                                        rel="noopener noreferrer">
+                                        46-E, Prospect Chambers Annexe, Fort<br>Mumbai - 400001
+                                    </a>
                                 </p>
                             </div>
                             <div>
                                 <h4 class="text-primary fw-medium">Pune Office</h4>
-                                <p class="text-gray-400 mb-2">I-101, Pride Platinum, Baner<br>Pune - 411045</p>
+                                <p class="text-gray-400 mb-2">
+                                    <a href="https://maps.app.goo.gl/1Cr5bs4UTxJiiYDp9" target="_blank"
+                                        rel="noopener noreferrer">
+                                        I-101, Pride Platinum, Baner<br>Pune - 411045
+                                    </a>
+                                </p>
                             </div>
                             <div>
                                 <h4 class="text-primary fw-medium">Prayagraj Office</h4>
-                                <p class="text-gray-400 mb-2">SF-6, Mahakali Apartments, 97 Stanley Road,
-                                    Muirabad<br>Prayagraj - 211002</p>
+                                <p class="text-gray-400 mb-2">
+                                    <a href="https://maps.app.goo.gl/eeVdcLbgG6FjDqzW6" target="_blank"
+                                        rel="noopener noreferrer">
+                                        SF-6, Mahakali Apartments, 97 Stanley Road, Muirabad<br>Prayagraj - 211002
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -572,7 +584,8 @@
                             class="social-icon" aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://www.linkedin.com/company/narayani-associates" class="social-icon" aria-label="Instagram">
+                        <a href="https://www.linkedin.com/company/narayani-associates" class="social-icon"
+                            aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -607,7 +620,8 @@
                     <form class="newsletter-form" id="footer-newsletter-form">
                         <div class="flex">
                             <input type="email" name="email" placeholder="Your email"
-                                class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-primary text-white flex-grow" required>
+                                class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-primary text-white flex-grow"
+                                required>
                             <button type="submit"
                                 class="bg-primary px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition-all">
                                 <i class="fas fa-paper-plane"></i>
@@ -635,27 +649,27 @@
     <!-- Newsletter Script for Index Page -->
     <script>
         // Initialize EmailJS
-        (function() {
+        (function () {
             emailjs.init("uTTToUvth5zoNBAth");
         })();
 
         // Wait for DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const newsletterForm = document.getElementById('footer-newsletter-form');
-            
+
             if (newsletterForm) {
-                newsletterForm.addEventListener('submit', async function(e) {
+                newsletterForm.addEventListener('submit', async function (e) {
                     e.preventDefault();
-                    
+
                     const emailInput = this.querySelector('input[type="email"]');
                     const submitButton = this.querySelector('button[type="submit"]');
                     const originalButtonHTML = submitButton.innerHTML;
-                    
+
                     submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
                     submitButton.disabled = true;
-                    
+
                     const email = emailInput.value.trim();
-                    
+
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                     if (!emailRegex.test(email)) {
                         alert('Please enter a valid email address');
@@ -663,7 +677,7 @@
                         submitButton.disabled = false;
                         return;
                     }
-                    
+
                     try {
                         // 1. Send with EmailJS
                         const templateParams = {
@@ -672,20 +686,20 @@
                             message: 'Newsletter subscription request',
                             subject: 'New Newsletter Subscription'
                         };
-                        
+
                         await emailjs.send(
                             'service_v280jqs',
                             'template_5ijkkd8',
                             templateParams
                         );
-                        
+
                         // 2. Check if email already exists in Sheet.best
                         const sheetResponse = await fetch('https://api.sheetbest.com/sheets/03134ab4-b14e-42ac-afc7-074cad9fe647');
                         const existingEmails = await sheetResponse.json();
-                        
+
                         // Check if email is already subscribed
                         const emailExists = existingEmails.some(entry => entry.email?.toLowerCase() === email.toLowerCase());
-                        
+
                         if (emailExists) {
                             alert('You have already subscribed to the newsletter.');
                         } else {
@@ -697,9 +711,9 @@
                                 },
                                 body: JSON.stringify({ email })
                             });
-                            
+
                             if (!postResponse.ok) throw new Error('Failed to save subscription.');
-                            
+
                             alert('Thank you for subscribing to our newsletter!');
                             newsletterForm.reset();
                         }

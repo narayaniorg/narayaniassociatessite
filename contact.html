@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,26 +9,29 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
     <style>
-      
-
         /* Form Styles */
-        .form-control:focus, .form-select:focus {
+        .form-control:focus,
+        .form-select:focus {
             border-color: var(--primary-color);
             box-shadow: 0 0 0 0.25rem rgba(var(--primary-rgb), 0.25);
-            background-color: #1f2937 !important; /* dark gray background */
+            background-color: #1f2937 !important;
+            /* dark gray background */
             color: white !important;
         }
 
-        .form-control, .form-select {
+        .form-control,
+        .form-select {
             background-color: #1f2937 !important;
             color: white !important;
         }
 
         .form-control::placeholder {
-            color: #9ca3af !important; /* light gray for placeholder */
+            color: #9ca3af !important;
+            /* light gray for placeholder */
         }
 
         .btn-primary {
@@ -99,24 +103,25 @@
             .page-header {
                 padding-top: 120px;
             }
-            
+
             .mobile-menu {
                 padding-top: 60px;
             }
         }
     </style>
 </head>
+
 <body>
-    
-   <!-- Custom Cursor Elements -->
-   <div class="cursor"></div>
-   <div class="cursor-dot"></div>
 
-   <!-- Navigation -->
-   <div id="navbar-placeholder"></div>
+    <!-- Custom Cursor Elements -->
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
 
-   <!-- Mobile Menu -->
-   <div class="mobile-menu" id="mobile-menu">
+    <!-- Navigation -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
         <div class="container mx-auto px-4 py-8">
             <div class="flex justify-end mb-8">
                 <button id="close-menu" class="text-white focus:outline-none">
@@ -158,19 +163,23 @@
                         <form id="contact-form">
                             <div class="mb-4">
                                 <label class="form-label text-gray-300" for="name">Full Name</label>
-                                <input type="text" id="name" class="form-control bg-gray-800 border-gray-700 text-white" required>
+                                <input type="text" id="name" class="form-control bg-gray-800 border-gray-700 text-white"
+                                    required>
                             </div>
                             <div class="mb-4">
                                 <label class="form-label text-gray-300" for="email">Email Address</label>
-                                <input type="email" id="email" class="form-control bg-gray-800 border-gray-700 text-white" required>
+                                <input type="email" id="email"
+                                    class="form-control bg-gray-800 border-gray-700 text-white" required>
                             </div>
                             <div class="mb-4">
                                 <label class="form-label text-gray-300" for="phone">Phone Number</label>
-                                <input type="tel" id="phone" class="form-control bg-gray-800 border-gray-700 text-white" required>
+                                <input type="tel" id="phone" class="form-control bg-gray-800 border-gray-700 text-white"
+                                    required>
                             </div>
                             <div class="mb-4">
                                 <label class="form-label text-gray-300" for="subject">Subject</label>
-                                <select id="subject" class="form-select bg-gray-800 border-gray-700 text-white" required>
+                                <select id="subject" class="form-select bg-gray-800 border-gray-700 text-white"
+                                    required>
                                     <option value="">Select a subject</option>
                                     <option value="general">General Inquiry</option>
                                     <option value="corporate">Corporate Law</option>
@@ -182,13 +191,14 @@
                             </div>
                             <div class="mb-4">
                                 <label class="form-label text-gray-300" for="message">Your Message</label>
-                                <textarea id="message" rows="4" class="form-control bg-gray-800 border-gray-700 text-white" required></textarea>
+                                <textarea id="message" rows="4"
+                                    class="form-control bg-gray-800 border-gray-700 text-white" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary w-100 py-3 rounded-3">Send Message</button>
                         </form>
                     </div>
                 </div>
-                
+
                 <!-- Contact Information -->
                 <div class="col-12 col-lg-6" data-aos="fade-left">
                     <div class="d-flex flex-column gap-4">
@@ -198,32 +208,49 @@
                             <div class="d-flex flex-column gap-4">
                                 <div>
                                     <h4 class="text-primary fw-medium">Mumbai Office</h4>
-                                    <p class="text-gray-400 mb-2">46-E, Prospect Chambers Annexe, Fort<br>Mumbai - 400001</p>
+                                    <p class="text-gray-400 mb-2">
+                                        <a href="https://maps.app.goo.gl/tktxsDSjVTfr7tNN9" target="_blank"
+                                            rel="noopener noreferrer">
+                                            46-E, Prospect Chambers Annexe, Fort<br>Mumbai - 400001
+                                        </a>
+                                    </p>
                                 </div>
                                 <div>
                                     <h4 class="text-primary fw-medium">Pune Office</h4>
-                                    <p class="text-gray-400 mb-2">I-101, Pride Platinum, Baner<br>Pune - 411045</p>
+                                    <p class="text-gray-400 mb-2">
+                                        <a href="https://maps.app.goo.gl/1Cr5bs4UTxJiiYDp9" target="_blank"
+                                            rel="noopener noreferrer">
+                                            I-101, Pride Platinum, Baner<br>Pune - 411045
+                                        </a>
+                                    </p>
                                 </div>
                                 <div>
                                     <h4 class="text-primary fw-medium">Prayagraj Office</h4>
-                                    <p class="text-gray-400 mb-2">SF-6, Mahakali Apartments, 97 Stanley Road, Muirabad<br>Prayagraj - 211002</p>
+                                    <p class="text-gray-400 mb-2">
+                                        <a href="https://maps.app.goo.gl/eeVdcLbgG6FjDqzW6" target="_blank"
+                                            rel="noopener noreferrer">
+                                            SF-6, Mahakali Apartments, 97 Stanley Road, Muirabad<br>Prayagraj - 211002
+                                        </a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        
-                         <!-- Social Media -->
-                         <div class="bg-black p-4 p-lg-5 rounded-3">
+
+                        <!-- Social Media -->
+                        <div class="bg-black p-4 p-lg-5 rounded-3">
                             <h3 class="h4 fw-bold mb-4">Follow Us</h3>
                             <div class="d-flex gap-3">
-                                <a href="https://www.linkedin.com/company/narayani-associates" class="social-icon btn btn-outline-primary rounded-circle" aria-label="LinkedIn">
+                                <a href="https://www.linkedin.com/company/narayani-associates"
+                                    class="social-icon btn btn-outline-primary rounded-circle" aria-label="LinkedIn">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                <a href="https://www.linkedin.com/company/narayani-associates" class="social-icon btn btn-outline-primary rounded-circle" aria-label="Instagram">
+                                <a href="https://www.linkedin.com/company/narayani-associates"
+                                    class="social-icon btn btn-outline-primary rounded-circle" aria-label="Instagram">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </div>
                         </div>
-                        
+
                         <!-- Contact Information -->
                         <div class="bg-black p-4 p-lg-5 rounded-3">
                             <h3 class="h4 fw-bold mb-4">Contact Information</h3>
@@ -232,7 +259,7 @@
                                     <i class="fas fa-envelope text-primary me-3 fa-lg"></i>
                                     <div>
                                         <p class="text-gray-400 mb-1">Email us at:</p>
-                                        <p class="text-gray-400 mb-0">connect@nalaw.in</p>
+                                        <p class="text-gray-400 mb-0"><a href="mailto:connect@nalaw.in">connect@nalaw.in</a></p>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center">
@@ -253,13 +280,18 @@
                                     <i class="fab fa-linkedin text-primary me-3 fa-lg"></i>
                                     <div>
                                         <p class="text-gray-400 mb-1">Connect on LinkedIn:</p>
-                                        <p class="text-gray-400 mb-0">Narayani Associates</p>
+                                        <p class="text-gray-400 mb-0">
+                                            <a href="https://www.linkedin.com/company/narayani-associates"
+                                                target="_blank" rel="noopener noreferrer">
+                                                Narayani Associates
+                                            </a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                       
+
+
                     </div>
                 </div>
             </div>
@@ -274,15 +306,13 @@
                 <h3 class="display-5 fw-bold mb-4">Our Office Locations</h3>
                 <p class="lead text-gray-300">Visit us at any of our office locations across India</p>
             </div>
-            
+
             <div class="row g-4">
                 <div class="col-12" data-aos="fade-up">
                     <div class="ratio ratio-21x9">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9024424303395!2d77.2065323!3d28.6289543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xcdee88e47393c3f1!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1647881234567!5m2!1sen!2sin" 
-                                class="rounded-3" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9024424303395!2d77.2065323!3d28.6289543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xcdee88e47393c3f1!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1647881234567!5m2!1sen!2sin"
+                            class="rounded-3" style="border:0;" allowfullscreen="" loading="lazy">
                         </iframe>
                     </div>
                 </div>
@@ -316,7 +346,7 @@
     <script src="./js/cursorscript.js"></script>
     <script>
         // Initialize EmailJS immediately after loading
-        (function() {
+        (function () {
             emailjs.init("uTTToUvth5zoNBAth");
         })();
     </script>
@@ -329,16 +359,16 @@
 
         // Form Handling
         const contactForm = document.getElementById('contact-form');
-        
+
         contactForm?.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
+
             // Show loading state
             const submitButton = contactForm.querySelector('button[type="submit"]');
             const originalButtonText = submitButton.innerHTML;
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitButton.disabled = true;
-            
+
             // Get form data
             const formData = {
                 name: document.getElementById('name').value,
@@ -405,4 +435,5 @@
         });
     </script>
 </body>
-</html> 
+
+</html>

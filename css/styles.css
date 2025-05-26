@@ -888,6 +888,7 @@ img {
 .social-icon:hover {
     transform: translateY(-5px);
     color: var(--light);
+    
 }
 
 .social-icon:hover::before {
