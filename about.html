@@ -51,6 +51,11 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919022853789" target="_blank" class="whatsapp-button" aria-label="Contact on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Page Header -->
     <header class="page-header flex items-center">
         <div class="col-12 text-center" data-aos="fade-up">
@@ -199,11 +204,29 @@
     <script src="js/ui-components.js"></script>
     <script src="js/script.js"></script>
     <script src="./js/cursorscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/scroll-animations.js"></script>
+
     <script>
         // Initialize AOS
         AOS.init({
             duration: 1000,
             once: true
+        });
+
+        // Handle scroll-to-top and WhatsApp button visibility
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.querySelector('.scroll-to-top');
+            const whatsappButton = document.querySelector('.whatsapp-button');
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition > 300) {
+                scrollTop.classList.add('show');
+                whatsappButton.classList.add('show');
+            } else {
+                scrollTop.classList.remove('show');
+                whatsappButton.classList.remove('show');
+            }
         });
     </script>
 </body>
