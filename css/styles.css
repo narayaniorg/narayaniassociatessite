@@ -1,4 +1,4 @@
-:root {
+:root {    
     --primary: #FF6F0D;
     --primary-dark: #E65C00;
     --primary-light: #FF8F3D;
@@ -1222,7 +1222,7 @@ img {
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: var(--primary-color);
+    background: #FF6F0D;;
     color: white;
     border-radius: 50%;
     display: flex;
