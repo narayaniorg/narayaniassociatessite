@@ -173,15 +173,25 @@ const menuToggle = document.getElementById('menu-toggle');
 const closeMenu = document.getElementById('close-menu');
 const mobileMenu = document.getElementById('mobile-menu');
 
-menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.add('open');
-    document.body.style.overflow = 'hidden';
-});
-
-closeMenu.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    document.body.style.overflow = '';
-});
+// Remove conflicting logic and only use .active
+if (menuToggle && closeMenu && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+    closeMenu.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+    // Close menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('.mobile-link');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+}
 
 // Enhanced navbar scroll effect
 const navbar = document.getElementById('navbar');

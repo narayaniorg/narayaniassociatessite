@@ -349,22 +349,9 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(to right bottom, var(--dark) 49%, rgba(255, 111, 13, 0.1) 50%);
 }
 
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    transform: translateX(100%);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow-y: auto;
-}
+
+
+
 
 .mobile-menu.active {
     transform: translateX(0);
@@ -1304,16 +1291,22 @@ img {
     position: fixed;
     top: 0;
     right: 0;
-    width: 100%;
+    width: 100vw;
+    max-width: 320px;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(17, 17, 17, 0.6); /* glassy dark */
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: -2px 0 16px rgba(0, 0, 0, 0.2);
+
     z-index: 1000;
     transform: translateX(100%);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
     overflow-y: auto;
 }
 
@@ -1790,4 +1783,25 @@ img {
     background-color: #128C7E;
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional: Backdrop for sidebar */
+#mobile-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 900;
+    display: none;
+}
+#mobile-backdrop.active {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none !important;
+    }
+    #mobile-backdrop {
+        display: none !important;
+    }
 }

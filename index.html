@@ -12,6 +12,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
+    <style>
+      html, body {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+      }
+      .container, .mx-auto, .px-4 {
+        box-sizing: border-box;
+        /* overflow-x: hidden !important; */
+      }
+      .flex, .grid {
+        min-width: 0 !important;
+        /* overflow-x: hidden !important; */
+      }
+      img {
+        max-width: 100% !important;
+        height: auto;
+        display: block;
+      }
+      .btn-primary, .btn-outline {
+        white-space: nowrap;
+      }
+    </style>
 
 </head>
 
@@ -43,23 +65,7 @@
     <!-- Navigation -->
     <div id="navbar-placeholder"></div>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobile-menu">
-        <div class="container mx-auto px-4 py-8">
-            <div class="flex justify-end mb-8">
-                <button id="close-menu" class="text-white focus:outline-none">
-                    <i class="fas fa-times text-3xl"></i>
-                </button>
-            </div>
-            <div class="flex flex-col space-y-6 items-center text-xl">
-                <a href="about.html" class="nav-link mobile-link">About</a>
-                <a href="practices.html" class="nav-link mobile-link">Practice Areas</a>
-                <a href="team.html" class="nav-link mobile-link">Our Team</a>
-                <!-- <a href="testimonials.html" class="nav-link mobile-link">Testimonials</a> -->
-                <a href="contact.html" class="nav-link mobile-link">Contact</a>
-            </div>
-        </div>
-    </div>
+ 
 
     <!-- Hero Section -->
     <section class="hero-section flex items-center relative" id="home">
@@ -76,13 +82,13 @@
                     range from everyday legal queries to the most complex litigation and
                     advisory mandates.
                 </p>
-                <div class="flex flex-wrap gap-4">
+                <div class="flex flex-wrap gap-4 items-center justify-center md:justify-start">
                     <a href="contact.html" class="btn-primary px-8 py-3 rounded-lg font-medium">Consult Now</a>
                     <a href="practices.html" class="btn-outline px-8 py-3 rounded-lg font-medium">Our Services</a>
                 </div>
             </div>
         </div>
-        <div class="animated-wave">
+        <div class="animated-wave" style="max-width:100vw;">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                 preserveAspectRatio="none">
                 <path
@@ -93,54 +99,54 @@
     </section>
 
     <!-- About Section -->
-    <section class="py-20 bg-black" id="about">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-                    <img src="./img/law.svg" alt="About Narayani Associates" class="rounded-lg shadow-xl">
+    <section class="py-12 md:py-20 bg-black" id="about">
+        <div class="container mx-auto px-4 sm:px-4">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                <div class="w-full md:w-1/2 mb-6 md:mb-0" data-aos="fade-right">
+                    <img src="./img/law.svg" alt="About Narayani Associates" class="rounded-lg shadow-xl w-full max-w-xs mx-auto md:max-w-full">
                 </div>
-                <div class="md:w-1/2 md:pl-10" data-aos="fade-left">
-                    <h2 class="text-primary text-3xl mb-6 playfair">Our Legacy</h2>
-                    <h3 class="text-4xl font-bold mb-6">A Legacy of Trust. A Future of Excellence.</h3>
-                    <p class="text-gray-300 mb-6">
+                <div class="w-full md:w-1/2 md:pl-10" data-aos="fade-left">
+                    <h2 class="text-primary text-2xl md:text-3xl mb-4 md:mb-6 playfair">Our Legacy</h2>
+                    <h3 class="text-2xl md:text-4xl font-bold mb-4 md:mb-6">A Legacy of Trust. A Future of Excellence.</h3>
+                    <p class="text-gray-300 text-base md:text-lg mb-4 md:mb-6">
                         Narayani Associates is a law firm with a legacy of delivering impactful legal
                         solutions. We combine traditional values of integrity, discretion, and discipline with a modern,
                         results-oriented approach. Our work is driven by deep legal knowledge, industry insight,
                         and a personal commitment to each client's success.
                     </p>
-                    <div class="mb-8">
-                        <div class="flex items-center mb-4">
-                            <div class="mr-4 text-primary"><i class="fas fa-balance-scale text-2xl"></i></div>
+                    <div class="mb-6 md:mb-8">
+                        <div class="flex flex-col gap-4 md:gap-0 md:flex-row md:items-center mb-4">
+                            <div class="mr-0 md:mr-4 text-primary"><i class="fas fa-balance-scale text-2xl"></i></div>
                             <div>
-                                <h4 class="text-xl font-bold">Our Vision</h4>
-                                <p class="text-gray-400">To be recognized as a leading full service Indian law firm —
+                                <h4 class="text-lg md:text-xl font-bold">Our Vision</h4>
+                                <p class="text-gray-400 text-sm md:text-base">To be recognized as a leading full service Indian law firm —
                                     not by scale,
                                     but by the quality of impact we create for every client, every time.</p>
                             </div>
                         </div>
-                        <div class="flex items-center">
-                            <div class="mr-4 text-primary"><i class="fas fa-bullseye text-2xl"></i></div>
+                        <div class="flex flex-col gap-4 md:gap-0 md:flex-row md:items-center">
+                            <div class="mr-0 md:mr-4 text-primary"><i class="fas fa-bullseye text-2xl"></i></div>
                             <div>
-                                <h4 class="text-xl font-bold">Our Mission</h4>
-                                <p class="text-gray-400">To deliver effective, ethical, and efficient legal solutions
+                                <h4 class="text-lg md:text-xl font-bold">Our Mission</h4>
+                                <p class="text-gray-400 text-sm md:text-base">To deliver effective, ethical, and efficient legal solutions
                                     with clarity and
                                     care. We aim to simplify legal processes for our clients and be their long-
                                     term advisors in every phase of business and life.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="flex gap-4">
-                        <div class="text-center p-6 rounded-lg bg-gray-900">
-                            <h4 class="text-4xl font-bold text-primary mb-2">25+</h4>
-                            <p class="text-gray-400">Years Experience</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="text-center p-4 md:p-6 rounded-lg bg-gray-900 flex-1">
+                            <h4 class="text-2xl md:text-4xl font-bold text-primary mb-1 md:mb-2">25+</h4>
+                            <p class="text-gray-400 text-xs md:text-base">Years Experience</p>
                         </div>
-                        <div class="text-center p-6 rounded-lg bg-gray-900">
-                            <h4 class="text-4xl font-bold text-primary mb-2">3</h4>
-                            <p class="text-gray-400">Office Locations</p>
+                        <div class="text-center p-4 md:p-6 rounded-lg bg-gray-900 flex-1">
+                            <h4 class="text-2xl md:text-4xl font-bold text-primary mb-1 md:mb-2">3</h4>
+                            <p class="text-gray-400 text-xs md:text-base">Office Locations</p>
                         </div>
-                        <div class="text-center p-6 rounded-lg bg-gray-900">
-                            <h4 class="text-4xl font-bold text-primary mb-2">100%</h4>
-                            <p class="text-gray-400">Client Focused</p>
+                        <div class="text-center p-4 md:p-6 rounded-lg bg-gray-900 flex-1">
+                            <h4 class="text-2xl md:text-4xl font-bold text-primary mb-1 md:mb-2">100%</h4>
+                            <p class="text-gray-400 text-xs md:text-base">Client Focused</p>
                         </div>
                     </div>
                 </div>
@@ -158,7 +164,7 @@
                     lie in our deep expertise, unwavering commitment, and a result-driven approach.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" >
                 <div class="p-6 rounded-lg bg-black shadow-lg" data-aos="fade-up" data-aos-delay="100">
                     <div class="mb-4 text-primary"><i class="fas fa-brain text-4xl"></i></div>
                     <h4 class="text-xl font-bold mb-3">Expertise</h4>
@@ -201,7 +207,7 @@
                     and representation.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" >
                 <!-- Practice Area 1 -->
                 <div class="practice-area p-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-center mb-4">
@@ -288,7 +294,7 @@
                 <p class="text-gray-300">Your Trusted Source for Simplified Legal Insights</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center" >
                 <div class="relative" data-aos="fade-right">
                     <div class="text-primary text-6xl mb-6">
                         <i class="fas fa-newspaper"></i>
@@ -343,7 +349,7 @@
                     to make a difference. Our advocates are well versed in law and procedures and are result driven.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12" >
                 <!-- Partner 1 -->
                 <div class="partner-card flex flex-col md:flex-row bg-black rounded-lg overflow-hidden shadow-lg"
                     data-aos="fade-up">
@@ -413,7 +419,7 @@
                     established corporations to innovative startups.</p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" >
                 <!-- Client 1 -->
                 <div class="client-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
                     <div class="client-logo mb-4">
