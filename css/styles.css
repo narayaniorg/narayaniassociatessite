@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--primary);
 }
 
-.text-primary {
+.text-warning {
     color: var(--primary);
 }
 
@@ -1035,7 +1035,7 @@ img {
     overflow: hidden;
 }
 
-.category-card .text-primary {
+.category-card .text-warning {
     transition: transform 0.3s ease;
 }
 
