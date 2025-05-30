@@ -11,8 +11,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-        <script src="https://www.google.com/recaptcha/api.js?render=6LdLgVArAAAAAM2BJGvXjD9_TSPuEOm47eeva7R7"></script>
-
     <link href="./css/styles.css" rel="stylesheet">
     <style>
       html, body {
@@ -629,17 +627,14 @@
                     <h4 class="text-xl font-bold mb-4">Newsletter</h4>
                     <p class="text-gray-400 mb-4">Subscribe to our newsletter for legal updates and insights.</p>
                     <form class="newsletter-form" id="footer-newsletter-form">
-                        <div class="flex flex-col gap-4">
-                            <div class="flex">
-                                <input type="email" name="email" placeholder="Your email"
-                                    class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-primary text-white flex-grow"
-                                    required>
-                                <button type="submit"
-                                    class="bg-primary px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition-all">
-                                    <i class="fas fa-paper-plane"></i>
-                                </button>
-                            </div>
-                            <div class="g-recaptcha" data-sitekey="6LdLgVArAAAAAM2BJGvXjD9_TSPuEOm47eeva7R7"></div>
+                        <div class="flex">
+                            <input type="email" name="email" placeholder="Your email"
+                                class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-primary text-white flex-grow"
+                                required>
+                            <button type="submit"
+                                class="bg-primary px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition-all">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -655,7 +650,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="js/common.js"></script>
     <script src="js/ui-components.js"></script>
     <script src="js/script.js"></script>
@@ -698,13 +692,6 @@
                     const emailInput = this.querySelector('input[type="email"]');
                     const submitButton = this.querySelector('button[type="submit"]');
                     const originalButtonHTML = submitButton.innerHTML;
-
-                    // Verify reCAPTCHA
-                    const recaptchaResponse = grecaptcha.getResponse();
-                    if (!recaptchaResponse) {
-                        alert('Please complete the reCAPTCHA verification');
-                        return;
-                    }
 
                     submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
                     submitButton.disabled = true;
@@ -757,7 +744,6 @@
 
                             alert('Thank you for subscribing to our newsletter!');
                             newsletterForm.reset();
-                            grecaptcha.reset(); // Reset reCAPTCHA after successful submission
                         }
                     } catch (error) {
                         console.error('Newsletter subscription failed:', error);
