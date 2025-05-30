@@ -51,10 +51,13 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--primary);
 }
 
-.text-warning {
+.textdesign {
     color: var(--primary);
 }
 
+.textdesign{
+    color: #FFDAB9;
+}
 .border-primary {
     border-color: var(--primary);
 }
@@ -1035,7 +1038,7 @@ img {
     overflow: hidden;
 }
 
-.category-card .text-warning {
+.category-card .textdesign {
     transition: transform 0.3s ease;
 }
 
