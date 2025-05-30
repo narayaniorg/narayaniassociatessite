@@ -51,12 +51,9 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--primary);
 }
 
-.textdesign {
-    color: var(--primary);
-}
 
 .textdesign{
-    color: #FFDAB9;
+    color: #FF6F0D;
 }
 .border-primary {
     border-color: var(--primary);
@@ -1807,4 +1804,8 @@ img {
     #mobile-backdrop {
         display: none !important;
     }
+}
+
+.text-cd{
+    color: #FF6F0D;
 }
