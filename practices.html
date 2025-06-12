@@ -50,6 +50,11 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Brochure Download Button -->
+    <a href="./nalawbrochure.pdf" target="_blank" class="brochure-button" aria-label="Download Brochure">
+        <i class="fas fa-file-pdf"></i>
+    </a>
+
     <!-- Page Header -->
     <header class="page-header flex items-center">
         <div class="col-12 text-center" data-aos="fade-up">
@@ -304,14 +309,17 @@
         window.addEventListener('scroll', function() {
             const scrollTop = document.querySelector('.scroll-to-top');
             const whatsappButton = document.querySelector('.whatsapp-button');
+            const brochureButton = document.querySelector('.brochure-button');
             const scrollPosition = window.scrollY;
 
             if (scrollPosition > 300) {
                 scrollTop.classList.add('show');
                 whatsappButton.classList.add('show');
+                brochureButton.classList.add('show');
             } else {
                 scrollTop.classList.remove('show');
                 whatsappButton.classList.remove('show');
+                brochureButton.classList.remove('show');
             }
         });
     </script>

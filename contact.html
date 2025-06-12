@@ -289,16 +289,14 @@
                                         <p class="text-cd mb-0">+22 - 4603 3993</p>
                                     </div>
                                 </div>
+                                <!-- Brochure Download Section -->
                                 <div class="d-flex align-items-center">
-                                    <i class="fab fa-linkedin textdesign me-3 fa-lg"></i>
+                                    <i class="fas fa-file-pdf textdesign me-3 fa-lg"></i>
                                     <div>
-                                        <p class="text-gray-400 mb-1">Connect on LinkedIn:</p>
-                                        <p class="text-cd mb-0">
-                                            <a href="https://www.linkedin.com/company/narayani-associates"
-                                                target="_blank" rel="noopener noreferrer">
-                                                Narayani Associates
-                                            </a>
-                                        </p>
+                                        <p class="text-gray-400 mb-1">Download our brochure:</p>
+                                        <a href="./nalawbrochure.pdf" target="_blank" class="btn btn-outline-primary">
+                                            <i class="fas fa-download me-2"></i>Download Brochure
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -352,6 +350,11 @@
     <!-- WhatsApp Button -->
     <a href="https://wa.me/919022853789" target="_blank" class="whatsapp-button" aria-label="Contact on WhatsApp">
         <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Brochure Download Button -->
+    <a href="./nalawbrochure.pdf" target="_blank" class="brochure-button" aria-label="Download Brochure">
+        <i class="fas fa-file-pdf"></i>
     </a>
 
     <!-- Scripts -->
@@ -457,17 +460,20 @@
     </script>
     <script>
         // Handle scroll-to-top and WhatsApp button visibility
-        window.addEventListener('scroll', function () {
+        window.addEventListener('scroll', function() {
             const scrollTop = document.querySelector('.scroll-to-top');
             const whatsappButton = document.querySelector('.whatsapp-button');
+            const brochureButton = document.querySelector('.brochure-button');
             const scrollPosition = window.scrollY;
 
             if (scrollPosition > 300) {
                 scrollTop.classList.add('show');
                 whatsappButton.classList.add('show');
+                brochureButton.classList.add('show');
             } else {
                 scrollTop.classList.remove('show');
                 whatsappButton.classList.remove('show');
+                brochureButton.classList.remove('show');
             }
         });
     </script>
