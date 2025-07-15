@@ -1205,7 +1205,7 @@ img {
 /* Scroll to Top Button */
 .scroll-to-top {
     position: fixed;
-    bottom: 20px;
+    bottom: 80px;
     right: 20px;
     width: 50px;
     height: 50px;
@@ -1754,7 +1754,7 @@ img {
 /* WhatsApp Button */
 .whatsapp-button {
     position: fixed;
-    bottom: 100px;
+    bottom: 150px;
     right: 20px;
     width: 50px;
     height: 50px;
@@ -1788,7 +1788,7 @@ img {
 /* Brochure Download Button */
 .brochure-button {
     position: fixed;
-    bottom: 170px;
+    bottom: 220px;
     right: 20px;
     width: 50px;
     height: 50px;
