@@ -257,13 +257,11 @@ const disclaimerModal = document.getElementById('disclaimerModal');
 const disclaimerAccept = document.getElementById('disclaimerAccept');
 const proceedToWebsiteBtn = document.getElementById('proceedToWebsite');
 
-if (!localStorage.getItem('disclaimerAccepted')) {
-    disclaimerModal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-    setTimeout(() => {
-        disclaimerModal.classList.add('show');
-    }, 100);
-}
+disclaimerModal.style.display = 'block';
+document.body.style.overflow = 'hidden';
+setTimeout(() => {
+    disclaimerModal.classList.add('show');
+}, 100);
 
 disclaimerAccept.addEventListener('change', () => {
     proceedToWebsiteBtn.disabled = !disclaimerAccept.checked;
@@ -271,7 +269,6 @@ disclaimerAccept.addEventListener('change', () => {
 
 proceedToWebsiteBtn.addEventListener('click', () => {
     if (disclaimerAccept.checked) {
-        localStorage.setItem('disclaimerAccepted', 'true');
         disclaimerModal.classList.remove('show');
         setTimeout(() => {
             disclaimerModal.style.display = 'none';

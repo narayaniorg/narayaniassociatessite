@@ -293,14 +293,12 @@ function initializeModal() {
     const proceedToWebsiteBtn = document.getElementById('proceedToWebsite');
 
     if (disclaimerModal && disclaimerAccept && proceedToWebsiteBtn) {
-        // Show modal if disclaimer hasn't been accepted
-        if (!localStorage.getItem('disclaimerAccepted')) {
-            disclaimerModal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-            setTimeout(() => {
-                disclaimerModal.classList.add('show');
-            }, 100);
-        }
+        // Always show modal
+        disclaimerModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+            disclaimerModal.classList.add('show');
+        }, 100);
 
         // Handle checkbox change
         disclaimerAccept.addEventListener('change', () => {
@@ -310,7 +308,6 @@ function initializeModal() {
         // Handle proceed button click
         proceedToWebsiteBtn.addEventListener('click', () => {
             if (disclaimerAccept.checked) {
-                localStorage.setItem('disclaimerAccepted', 'true');
                 disclaimerModal.classList.remove('show');
                 setTimeout(() => {
                     disclaimerModal.style.display = 'none';
