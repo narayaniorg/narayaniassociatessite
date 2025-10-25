@@ -138,7 +138,7 @@ window.addEventListener('load', () => {
 });
 
 // Scroll to top functionality
-const scrollToTop = document.querySelector('.scroll-to-top');
+/* const scrollToTop = document.querySelector('.scroll-to-top');
 window.addEventListener('scroll', () => {
     if (window.pageYOffset > 300) {
         scrollToTop.classList.add('visible');
@@ -152,7 +152,7 @@ scrollToTop.addEventListener('click', () => {
         top: 0,
         behavior: 'smooth'
     });
-});
+}); */
 
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

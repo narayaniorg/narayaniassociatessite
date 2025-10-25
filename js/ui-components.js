@@ -13,7 +13,7 @@ function initializeLoadingAnimation() {
 }
 
 // Scroll to Top Button
-function initializeScrollToTop() {
+/* function initializeScrollToTop() {
     const scrollButton = document.querySelector('.scroll-to-top');
     if (!scrollButton) return;
 
@@ -33,10 +33,10 @@ function initializeScrollToTop() {
             behavior: 'smooth'
         });
     });
-}
+} */
 
 // Initialize all UI components
 document.addEventListener('DOMContentLoaded', () => {
     initializeLoadingAnimation();
-    initializeScrollToTop();
+    // initializeScrollToTop();
 }); 
