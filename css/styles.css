@@ -1148,7 +1148,16 @@ img {
 }
 
 
-/* Custom Cursor Styles */
+/* Custom Cursor Styles - ALL DISABLED */
+/* Force default cursor on all elements */
+* {
+    cursor: auto !important;
+}
+
+body {
+    cursor: auto !important;
+}
+
 /* * {
     cursor: none !important;
 }
