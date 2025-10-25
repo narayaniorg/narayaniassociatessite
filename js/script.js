@@ -218,8 +218,8 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Custom Cursor
-const cursor = document.querySelector('.cursor');
+// Custom Cursor - DISABLED
+/* const cursor = document.querySelector('.cursor');
 const cursorDot = document.querySelector('.cursor-dot');
 
 document.addEventListener('mousemove', (e) => {
@@ -250,7 +250,7 @@ document.addEventListener('mousedown', () => {
 
 document.addEventListener('mouseup', () => {
     cursor.classList.remove('click');
-});
+}); */
 
 // Enhanced Disclaimer Modal
 const disclaimerModal = document.getElementById('disclaimerModal');

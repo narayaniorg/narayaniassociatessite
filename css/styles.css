@@ -1158,6 +1158,10 @@ body {
     cursor: auto !important;
 }
 
+html {
+    cursor: auto !important;
+}
+
 /* * {
     cursor: none !important;
 }
