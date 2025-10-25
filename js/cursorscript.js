@@ -1,4 +1,4 @@
-// Wait for DOM to be fully loaded
+/* // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     const cursor = document.querySelector('.cursor');
     const cursorDot = document.querySelector('.cursor-dot');
@@ -48,4 +48,4 @@ document.addEventListener('DOMContentLoaded', () => {
         // If cursor elements don't exist or on touch device, show default cursor
         document.body.style.cursor = 'auto';
     }
-});
+}); */

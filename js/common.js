@@ -293,7 +293,16 @@ function initializeModal() {
     const proceedToWebsiteBtn = document.getElementById('proceedToWebsite');
 
     if (disclaimerModal && disclaimerAccept && proceedToWebsiteBtn) {
-        // Always show modal
+        // Check if disclaimer has been accepted before
+        const disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
+        
+        if (disclaimerAccepted === 'true') {
+            // If already accepted, don't show modal
+            disclaimerModal.style.display = 'none';
+            return;
+        }
+
+        // Show modal only if not accepted before
         disclaimerModal.style.display = 'block';
         document.body.style.overflow = 'hidden';
         setTimeout(() => {
@@ -308,6 +317,9 @@ function initializeModal() {
         // Handle proceed button click
         proceedToWebsiteBtn.addEventListener('click', () => {
             if (disclaimerAccept.checked) {
+                // Save to localStorage that disclaimer has been accepted
+                localStorage.setItem('disclaimerAccepted', 'true');
+                
                 disclaimerModal.classList.remove('show');
                 setTimeout(() => {
                     disclaimerModal.style.display = 'none';

@@ -257,25 +257,43 @@ const disclaimerModal = document.getElementById('disclaimerModal');
 const disclaimerAccept = document.getElementById('disclaimerAccept');
 const proceedToWebsiteBtn = document.getElementById('proceedToWebsite');
 
-disclaimerModal.style.display = 'block';
-document.body.style.overflow = 'hidden';
-setTimeout(() => {
-    disclaimerModal.classList.add('show');
-}, 100);
+// Check if disclaimer has been accepted before
+const disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
 
-disclaimerAccept.addEventListener('change', () => {
-    proceedToWebsiteBtn.disabled = !disclaimerAccept.checked;
-});
-
-proceedToWebsiteBtn.addEventListener('click', () => {
-    if (disclaimerAccept.checked) {
-        disclaimerModal.classList.remove('show');
-        setTimeout(() => {
-            disclaimerModal.style.display = 'none';
-            document.body.style.overflow = '';
-        }, 400);
+if (disclaimerAccepted === 'true') {
+    // If already accepted, don't show modal
+    if (disclaimerModal) {
+        disclaimerModal.style.display = 'none';
     }
-});
+} else {
+    // Show modal only if not accepted before
+    if (disclaimerModal) {
+        disclaimerModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+            disclaimerModal.classList.add('show');
+        }, 100);
+    }
+
+    if (disclaimerAccept && proceedToWebsiteBtn) {
+        disclaimerAccept.addEventListener('change', () => {
+            proceedToWebsiteBtn.disabled = !disclaimerAccept.checked;
+        });
+
+        proceedToWebsiteBtn.addEventListener('click', () => {
+            if (disclaimerAccept.checked) {
+                // Save to localStorage that disclaimer has been accepted
+                localStorage.setItem('disclaimerAccepted', 'true');
+                
+                disclaimerModal.classList.remove('show');
+                setTimeout(() => {
+                    disclaimerModal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }, 400);
+            }
+        });
+    }
+}
 
 // Image lazy loading
 const lazyImages = document.querySelectorAll('img[data-src]');

@@ -1149,7 +1149,7 @@ img {
 
 
  /* Custom Cursor Styles */
- * {
+/*  * {
     cursor: none !important;
 }
 
@@ -1200,7 +1200,7 @@ img {
     * {
         cursor: auto !important;
     }
-}
+} */
 
 /* Scroll to Top Button */
 .scroll-to-top {
@@ -1477,7 +1477,7 @@ img {
     border: none;
     border-radius: 5px;
     font-weight: 600;
-    cursor: none !important;
+    /* cursor: none !important; */
     transition: all 0.3s ease;
 }
 
@@ -1508,18 +1508,18 @@ img {
     gap: 0.5rem;
     margin: 1rem 0;
     color: #e0e0e0;
-    cursor: none !important;
+    /* cursor: none !important; */
 }
 
 .disclaimer-checkbox input[type="checkbox"] {
     width: 18px;
     height: 18px;
     accent-color: #FF6F0D;
-    cursor: none !important;
+    /* cursor: none !important; */
 }
 
 .disclaimer-checkbox label {
-    cursor: none !important;
+    /* cursor: none !important; */
 }
 
 .practice-filter {
@@ -1537,7 +1537,7 @@ img {
     color: #FF6F0D;
     background: transparent;
     transition: all 0.3s ease;
-    cursor: none !important;
+    /* cursor: none !important; */
 }
 
 .fbtn:hover,

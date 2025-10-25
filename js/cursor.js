@@ -1,4 +1,4 @@
-// Create cursor elements
+/* // Create cursor elements
 const cursor = document.createElement('div');
 cursor.className = 'cursor-particle';
 document.body.appendChild(cursor);
@@ -101,4 +101,4 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 if (prefersReducedMotion.matches) {
     cursor.style.display = 'none';
     trails.forEach(trail => trail.style.display = 'none');
-} 
+} */ 
