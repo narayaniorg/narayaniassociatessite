@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nalaw.in/sitemap.xml
